@@ -177,7 +177,7 @@ img {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  background: #161819;
+  background: black;
   position: fixed;
   opacity: 0.6;
   z-index: 1;
@@ -190,9 +190,9 @@ img {
 }
 .navigation .nav-links {
   display: flex;
-  width: 25%;
+  width: 20%;
   justify-content: space-between;
-  margin-right: 5%;
+  margin-right: 2%;
 }
 .navigation .nav-links a {
   text-decoration: none;
@@ -217,6 +217,8 @@ img {
   border-top: 1px dashed blue;
   height: 10rem;
   color: #6A25F8;
+  text-align: center;
+  padding-top: 4rem;
 }
 .main-content {
   display: flex;
@@ -233,23 +235,15 @@ img {
   align-items: center;
 }
 .main-content h1 {
-  font-weight: bold;
-  padding-top: 2rem;
-  font-size: 5rem;
-  position: relative;
-  bottom: 65rem;
-  letter-spacing: 4px;
-}
-.main-content h2 {
-  font-size: 5rem;
-  position: relative;
-  bottom: 25rem;
+  margin-top: -25rem;
+  z-index: 1;
+  font-size: 6rem;
 }
 .main-content p {
   text-align: center;
   font-size: 3rem;
   text-shadow: 0 0 5px blue;
-  margin-top: -13rem;
+  margin-top: -10rem;
   padding-top: 5rem;
   animation-name: appear;
   animation-iteration-count: infinite;
@@ -289,7 +283,7 @@ img {
 .products-and-features .features {
   margin-top: 5rem;
 }
-.products-and-features h3 {
+.products-and-features h2 {
   font-size: 3.5rem;
   color: black;
   text-shadow: none;
