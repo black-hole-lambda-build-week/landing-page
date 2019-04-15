@@ -131,7 +131,7 @@ table {
 }
 html {
   font-size: 62.5%;
-  background: black;
+  background: #161819;
 }
 html,
 body {
@@ -166,33 +166,60 @@ img {
   height: auto;
 }
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
 .main-header {
-  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .main-header .navigation {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #404154;
 }
 .main-header .navigation a {
   color: #000000;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border: 1px solid blue;
   border-radius: 15px;
   background: #6A25F8;
-  padding: 15px;
-  margin-right: 55px;
-  margin-left: 55px;
+  height: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.main-header .navigation a:hover {
+  box-shadow: 0 0 15px blue;
+}
+.main-header .navigation .logo {
+  align-self: center;
+  height: auto;
+  width: 25%;
 }
 .container {
   display: flex;
-  flex-direction: center;
+  flex-direction: column;
+  height: 100vh;
 }
 .container h1 {
   align-self: center;
   margin: 0 auto;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-shadow: 0 0 10px blue;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.container .blackhole {
+  min-width: 100%;
 }
