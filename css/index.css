@@ -131,11 +131,11 @@ table {
 }
 html {
   font-size: 62.5%;
-  background: #161819;
 }
 html,
 body {
   font-family: 'Roboto', sans-serif;
+  background: #070507;
 }
 h1,
 h2,
@@ -178,22 +178,25 @@ img {
   align-items: center;
   margin: 0 auto;
   background: #161819;
+  position: fixed;
+  opacity: 0.6;
+  z-index: 1;
 }
 .navigation .logo {
   align-self: center;
   height: auto;
-  width: 25%;
+  width: 20%;
   margin-left: 5%;
 }
 .navigation .nav-links {
   display: flex;
-  width: 30%;
+  width: 25%;
   justify-content: space-between;
   margin-right: 5%;
 }
 .navigation .nav-links a {
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   border-radius: 15px;
   color: #6A25F8;
   height: 40px;
@@ -209,10 +212,25 @@ img {
   border-top: 1px solid blue;
   text-shadow: 0 0 5px blue;
 }
+.footer {
+  font-size: 2rem;
+  border-top: 1px dashed blue;
+  height: 10rem;
+  color: #6A25F8;
+}
 .main-content {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+.main-content .blackhole {
+  min-width: 100%;
+}
+.main-content .intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .main-content h1 {
   font-weight: bold;
@@ -225,13 +243,14 @@ img {
 .main-content h2 {
   font-size: 5rem;
   position: relative;
-  bottom: 18rem;
+  bottom: 25rem;
 }
 .main-content p {
   text-align: center;
   font-size: 3rem;
   text-shadow: 0 0 5px blue;
-  margin-top: -9rem;
+  margin-top: -13rem;
+  padding-top: 5rem;
   animation-name: appear;
   animation-iteration-count: infinite;
   animation-duration: 1.5s;
@@ -246,31 +265,29 @@ img {
     opacity: 1;
   }
 }
-.main-content .blackhole {
-  min-width: 100%;
-  border-top: 1px dashed blue;
-  border-bottom: 1px dashed blue;
-}
-.main-content .intro {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 .products-and-features {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .products-and-features .products,
-.products-and-features .features {
-  margin-right: 10px;
-  margin-left: 10px;
+.products-and-features .features,
+.products-and-features .mission-statement,
+.products-and-features .message {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
   padding: 10px;
   background: #6A25F8;
   border-radius: 15px;
   box-shadow: 0 0 5px blue;
   width: 45%;
-  margin-top: -8rem;
+}
+.products-and-features .products,
+.products-and-features .features {
+  margin-top: 5rem;
 }
 .products-and-features h3 {
   font-size: 3.5rem;
