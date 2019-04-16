@@ -229,21 +229,34 @@
         margin: 1%;
       }
 
+      .text {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       h2 {
-        align-self: center;
+        // align-self: flex-start;
         color: @accentColor;
         text-shadow: 0 0 10px blue;
         font-family: Hiruko;
-        font-size: 2.6rem;
-        padding: 3%;
+        font-size: 3.5rem;
+        padding-top: 20px;
+        width: 250px;
+        text-align: center;
 
         @media @mobile {
           display: none;
         }
       }
+      p {
+        font-size: 2.2rem;
+        font-family: 'Roboto', sans-serif;
+      }
       .fab {
        color: @accentColor;
-       margin: 20px;
+       padding: 5px;
 
        @media @mobile {
         display: none;
