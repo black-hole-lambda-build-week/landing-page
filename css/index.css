@@ -192,6 +192,8 @@ img {
 @media (max-width: 600px) {
   .navigation {
     flex-direction: column;
+    position: absolute;
+    background: #000000;
   }
 }
 .navigation .logo {
@@ -207,7 +209,7 @@ img {
 }
 .navigation .nav-links {
   display: flex;
-  width: 25%;
+  width: 35vw;
   justify-content: space-between;
   margin-right: 2%;
 }
@@ -269,8 +271,8 @@ img {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-top: 8%;
   margin-bottom: 2rem;
+  margin: 8% auto 0 auto;
 }
 @media (max-width: 1200px) {
   .main-content .header-container {
@@ -315,7 +317,11 @@ img {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+}
+@media (max-width: 1200px) {
+  .main-content .header-container .intro .sign-up-btn {
+    margin-bottom: 3rem;
+  }
 }
 .main-content .header-container .intro .sign-up-btn:hover {
   background: black;
@@ -370,6 +376,11 @@ img {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 1200px) {
+  .tabs .tabs-items {
+    height: auto;
+  }
+}
 .tabs .tabs-item {
   display: none;
   color: #6A25F8;
@@ -386,6 +397,11 @@ img {
 .tabs .tabs-links {
   display: flex;
   background-color: #6A25F8;
+}
+@media (max-width: 800px) {
+  .tabs .tabs-links {
+    flex-direction: column;
+  }
 }
 .tabs .tabs-link {
   padding: 20px 25px;
