@@ -11,6 +11,10 @@
     }
     .blackhole {
         width: 55%;
+
+        @media @tablet {
+            width: 40%;
+        }
     }
     .intro {
         display: flex;
@@ -73,6 +77,10 @@
     border-bottom: 1px dashed blue;
     border-radius: 15px;
 
+    @media @tablet {
+        flex-direction: column;
+    }
+
     .products,
     .features {
       margin-bottom: 4rem;
@@ -81,11 +89,20 @@
       border-radius: 15px;
       box-shadow: 0 0 10px blue;
       width: 45%;
+
+      @media @tablet {
+        width: 90%;
+        margin: 0 auto; 
+    }
     }
 
     .products,
     .features {
-        margin-top: 5rem;
+        margin-bottom: 2rem;
+
+        @media @tablet {
+            margin-top: 2rem;
+        }
     }
 
     h2 {

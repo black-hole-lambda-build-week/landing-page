@@ -201,6 +201,16 @@ img {
   justify-content: space-between;
   margin-right: 2%;
 }
+@media (max-width: 1200px) {
+  .navigation .nav-links {
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .navigation .nav-links {
+    width: 50%;
+  }
+}
 .navigation .nav-links a {
   text-decoration: none;
   font-size: 1.8rem;
@@ -238,6 +248,11 @@ img {
 }
 .main-content .blackhole {
   width: 55%;
+}
+@media (max-width: 800px) {
+  .main-content .blackhole {
+    width: 40%;
+  }
 }
 .main-content .intro {
   display: flex;
@@ -296,6 +311,11 @@ img {
   border-bottom: 1px dashed blue;
   border-radius: 15px;
 }
+@media (max-width: 800px) {
+  .products-and-features {
+    flex-direction: column;
+  }
+}
 .products-and-features .products,
 .products-and-features .features {
   margin-bottom: 4rem;
@@ -305,9 +325,22 @@ img {
   box-shadow: 0 0 10px blue;
   width: 45%;
 }
+@media (max-width: 800px) {
+  .products-and-features .products,
+  .products-and-features .features {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 .products-and-features .products,
 .products-and-features .features {
-  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 800px) {
+  .products-and-features .products,
+  .products-and-features .features {
+    margin-top: 2rem;
+  }
 }
 .products-and-features h2 {
   font-size: 3.5rem;
