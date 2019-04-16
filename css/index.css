@@ -131,6 +131,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 html,
 body {
@@ -172,6 +173,7 @@ img {
   width: 100%;
   margin: 0 auto;
   background: #060406;
+  opacity: 0.7;
 }
 @font-face {
   font-family: Hiruko;
@@ -247,11 +249,8 @@ img {
   font-size: 2rem;
   color: #6A25F8;
   text-align: center;
-  padding-top: 3rem;
-  height: 10%;
-  padding-bottom: 2rem;
-  display: flex;
-  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .home .main-content {
   display: flex;
@@ -294,6 +293,7 @@ img {
   margin-bottom: 1rem;
   font-family: Hiruko;
   letter-spacing: 3px;
+  text-shadow: 0 0 10px blue;
 }
 .home .main-content .header-container .intro .sign-up-btn {
   background: #6A25F8;
@@ -426,7 +426,7 @@ img {
   width: 100% !important;
   margin: 0 auto !important;
   border-radius: 25px !important;
-  margin-bottom: 10rem !important;
+  margin-bottom: 1rem !important;
 }
 .home .carousel img,
 .home .carousel .carousel-inner {
@@ -434,7 +434,7 @@ img {
 }
 .about .container {
   background-image: url('../img/bg1.jpg');
-  opacity: 0.7;
+  opacity: 0.5;
   height: 100vh;
 }
 .about .container .boxes {
@@ -444,15 +444,15 @@ img {
   flex-wrap: wrap;
   height: 90vh;
   align-content: stretch;
-  padding: 10% 0 2% 0;
+  padding: 12% 0 2% 0;
 }
 .about .container .boxes h1 {
   align-self: flex-start;
 }
 .about .container .boxes .member {
   height: 175px;
-  width: 48%;
-  background: #6A25F8;
+  width: 45%;
+  background: #060406;
   opacity: 0.8;
   margin: 1%;
   align-self: center;
@@ -466,13 +466,36 @@ img {
   border-radius: 50%;
   margin: 1%;
 }
+.about .container .boxes .member .text {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .about .container .boxes .member h2 {
-  align-self: center;
-  color: black;
+  color: #6A25F8;
+  text-shadow: 0 0 10px blue;
   font-family: Hiruko;
-  font-size: 2.6rem;
-  padding-right: 3%;
+  font-size: 3.5rem;
+  padding-top: 20px;
+  width: 250px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .about .container .boxes .member h2 {
+    display: none;
+  }
 }
 .about .container .boxes .member p {
-  color: black;
+  font-size: 2.2rem;
+  font-family: 'Roboto', sans-serif;
+}
+.about .container .boxes .member .fab {
+  color: #6A25F8;
+  padding: 5px;
+}
+@media (max-width: 500px) {
+  .about .container .boxes .member .fab {
+    display: none;
+  }
 }

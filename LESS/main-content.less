@@ -37,6 +37,7 @@
                 margin-bottom: 1rem;
                 font-family: Hiruko;
                 letter-spacing: 3px;
+                text-shadow: 0 0 10px blue;
             }
     
             .sign-up-btn {
@@ -177,7 +178,7 @@
     width: 100% !important;
     margin: 0 auto !important;
     border-radius: 25px !important;
-    margin-bottom: 10rem !important;
+    margin-bottom: 1rem !important;
 
     img,
     .carousel-inner {
@@ -193,7 +194,7 @@
  
   .container {
     background-image: url('../img/bg1.jpg');
-    opacity: 0.7;
+    opacity: 0.5;
     height: 100vh;
 
     .boxes {
@@ -203,7 +204,7 @@
     flex-wrap: wrap;
     height: 90vh;
     align-content: stretch;
-    padding: 10% 0 2% 0;
+    padding: 12% 0 2% 0;
     
     h1 {
       align-self: flex-start;
@@ -211,8 +212,8 @@
 
     .member {
       height: 175px;
-      width: 48%;
-      background: @accentColor;
+      width: 45%;
+      background: #060406;
       opacity: 0.8;
       margin: 1%;
       align-self: center;
@@ -228,15 +229,38 @@
         margin: 1%;
       }
 
+      .text {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       h2 {
-        align-self: center;
-        color: black;
+        // align-self: flex-start;
+        color: @accentColor;
+        text-shadow: 0 0 10px blue;
         font-family: Hiruko;
-        font-size: 2.6rem;
-        padding-right: 3%;
+        font-size: 3.5rem;
+        padding-top: 20px;
+        width: 250px;
+        text-align: center;
+
+        @media @mobile {
+          display: none;
+        }
       }
       p {
-        color: black;
+        font-size: 2.2rem;
+        font-family: 'Roboto', sans-serif;
+      }
+      .fab {
+       color: @accentColor;
+       padding: 5px;
+
+       @media @mobile {
+        display: none;
+      }
       }
     }
   }
