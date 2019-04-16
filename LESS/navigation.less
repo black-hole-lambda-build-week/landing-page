@@ -3,10 +3,11 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
-        background: #161819;
+        background: #1e1d1e;
         position: fixed;
         opacity: 0.6;
-        z-index: 1;
+        z-index: 3;
+
         
         .logo {
             align-self: center;
@@ -19,7 +20,7 @@
             display: flex;
             width: 25%;
             justify-content: space-between;
-            margin-right: 5%;
+            margin-right: 2%;
 
         a {
             text-decoration: none;
@@ -32,13 +33,15 @@
             font-weight: bold;
             display: flex;
             align-items: center;
-            justify-content: center;            
+            justify-content: center;     
+            text-transform: lowercase;       
 
         &:hover {
-            border-bottom: 1px solid blue;
-            border-top: 1px solid blue;
+            border-bottom: 1px dashed blue;
+            // border-top: 1px solid blue;
             text-shadow: 0 0 5px blue;
           }
+          
         }
      }
   }

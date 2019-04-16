@@ -135,7 +135,7 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  background: #070507;
+  background: #060406;
 }
 h1,
 h2,
@@ -171,16 +171,18 @@ img {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  background: #060406;
+  opacity: 0.9;
 }
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  background: #161819;
+  background: #1e1d1e;
   position: fixed;
   opacity: 0.6;
-  z-index: 1;
+  z-index: 3;
 }
 .navigation .logo {
   align-self: center;
@@ -192,7 +194,7 @@ img {
   display: flex;
   width: 25%;
   justify-content: space-between;
-  margin-right: 5%;
+  margin-right: 2%;
 }
 .navigation .nav-links a {
   text-decoration: none;
@@ -206,56 +208,64 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-transform: lowercase;
 }
 .navigation .nav-links a:hover {
-  border-bottom: 1px solid blue;
-  border-top: 1px solid blue;
+  border-bottom: 1px dashed blue;
   text-shadow: 0 0 5px blue;
 }
 .footer {
   font-size: 2rem;
   border-top: 1px dashed blue;
-  height: 10rem;
+  height: 12rem;
   color: #6A25F8;
+  text-align: center;
+  padding-top: 4rem;
 }
 .main-content {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
+.main-content .header-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 8%;
+}
 .main-content .blackhole {
-  min-width: 100%;
+  width: 55%;
 }
 .main-content .intro {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  height: 60%;
 }
-.main-content h1 {
-  font-weight: bold;
-  padding-top: 2rem;
-  font-size: 5rem;
-  position: relative;
-  bottom: 65rem;
-  letter-spacing: 4px;
+.main-content .intro h1 {
+  z-index: 2;
+  font-size: 6rem;
+  border-bottom: 1px dashed blue;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 1rem;
 }
-.main-content h2 {
-  font-size: 5rem;
-  position: relative;
-  bottom: 25rem;
+.main-content .intro button {
+  background: #6A25F8;
+  box-shadow: 0 0 10px blue;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 1.8rem;
 }
-.main-content p {
-  text-align: center;
-  font-size: 3rem;
+.main-content .pulsing {
   text-shadow: 0 0 5px blue;
-  margin-top: -13rem;
-  padding-top: 5rem;
   animation-name: appear;
   animation-iteration-count: infinite;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
   animation-direction: alternate;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 @keyframes appear {
   from {
@@ -268,13 +278,11 @@ img {
 .products-and-features {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .products-and-features .products,
-.products-and-features .features,
-.products-and-features .mission-statement,
-.products-and-features .message {
+.products-and-features .features {
   margin-right: 1rem;
   margin-left: 1rem;
   margin-bottom: 5rem;
@@ -289,7 +297,7 @@ img {
 .products-and-features .features {
   margin-top: 5rem;
 }
-.products-and-features h3 {
+.products-and-features h2 {
   font-size: 3.5rem;
   color: black;
   text-shadow: none;
