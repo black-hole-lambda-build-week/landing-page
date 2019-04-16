@@ -135,7 +135,7 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  background: #060406;
+  background: #060406 !important;
 }
 h1,
 h2,
@@ -172,17 +172,26 @@ img {
   width: 100%;
   margin: 0 auto;
   background: #060406;
-  opacity: 0.9;
+}
+@font-face {
+  font-family: Hiruko;
+  src: url('../HirukoBlackAlternate.ttf');
 }
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  background: #1e1d1e;
+  background: #060406;
   position: fixed;
-  opacity: 0.6;
+  opacity: 0.7;
   z-index: 3;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .navigation {
+    flex-direction: column;
+  }
 }
 .navigation .logo {
   align-self: center;
@@ -190,11 +199,31 @@ img {
   width: 20%;
   margin-left: 5%;
 }
+@media (max-width: 500px) {
+  .navigation .logo {
+    width: 70%;
+  }
+}
 .navigation .nav-links {
   display: flex;
-  width: 25%;
+  width: 35vw;
   justify-content: space-between;
   margin-right: 2%;
+}
+@media (max-width: 1200px) {
+  .navigation .nav-links {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .navigation .nav-links {
+    width: 75%;
+  }
+}
+@media (max-width: 500px) {
+  .navigation .nav-links {
+    width: 100%;
+  }
 }
 .navigation .nav-links a {
   text-decoration: none;
@@ -203,12 +232,12 @@ img {
   color: #6A25F8;
   height: 40px;
   width: 120px;
-  font-family: 'Roboto', sans-serif;
+  font-family: Hiruko;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 .navigation .nav-links a:hover {
   border-bottom: 1px dashed blue;
@@ -216,48 +245,88 @@ img {
 }
 .footer {
   font-size: 2rem;
-  border-top: 1px dashed blue;
-  height: 12rem;
   color: #6A25F8;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 3rem;
+  height: 10%;
+  padding-bottom: 2rem;
 }
 .main-content {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .main-content {
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .main-content {
+    height: auto;
+  }
 }
 .main-content .header-container {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-top: 8%;
+  margin-bottom: 30%;
+  margin: 8% auto 0 auto;
 }
-.main-content .blackhole {
+@media (max-width: 1200px) {
+  .main-content .header-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .main-content .header-container {
+    flex-direction: column;
+    margin-top: 30%;
+  }
+}
+.main-content .header-container .blackhole {
   width: 55%;
+  height: 100%;
 }
-.main-content .intro {
+.main-content .header-container .intro {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   height: 60%;
 }
-.main-content .intro h1 {
+.main-content .header-container .intro h1 {
   z-index: 2;
   font-size: 6rem;
   border-bottom: 1px dashed blue;
   border-radius: 15px;
   padding: 10px;
   margin-bottom: 1rem;
+  font-family: Hiruko;
+  letter-spacing: 3px;
 }
-.main-content .intro button {
+.main-content .header-container .intro .sign-up-btn {
   background: #6A25F8;
   box-shadow: 0 0 10px blue;
   border: none;
-  padding: 15px;
+  padding: 5px 15px 5px 15px;
   border-radius: 25px;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
+  font-family: Hiruko, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+@media (max-width: 1200px) {
+  .main-content .header-container .intro .sign-up-btn {
+    margin-bottom: 3rem;
+  }
+}
+.main-content .header-container .intro .sign-up-btn:hover {
+  background: black;
+  color: #6A25F8;
+  cursor: pointer;
+  text-shadow: 0 0 5px blue;
 }
 .main-content .pulsing {
   text-shadow: 0 0 5px blue;
@@ -275,36 +344,100 @@ img {
     opacity: 1;
   }
 }
-.products-and-features {
+@media (max-width: 1200px) {
+  .main-content .pulsing {
+    font-size: 2.8rem;
+  }
+}
+.sub-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
-.products-and-features .products,
-.products-and-features .features {
-  margin-right: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 5rem;
-  margin-top: 1rem;
-  padding: 10px;
-  background: #6A25F8;
-  border-radius: 15px;
-  box-shadow: 0 0 5px blue;
-  width: 45%;
+.section {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  border: 1px solid #6A25F8;
+  box-shadow: 1px 1px 5px blue;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.products-and-features .products,
-.products-and-features .features {
-  margin-top: 5rem;
+.section .box {
+  padding: 40px;
 }
-.products-and-features h2 {
-  font-size: 3.5rem;
-  color: black;
-  text-shadow: none;
-  padding: 10px;
+.section .box .box-title {
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: bold;
 }
-.products-and-features p {
-  color: black;
-  padding: 10px;
+.tabs {
+  width: 100%;
+}
+.tabs .tabs-items {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .tabs .tabs-items {
+    height: auto;
+  }
+}
+.tabs .tabs-item {
+  display: none;
+  color: #6A25F8;
+  width: 75%;
+}
+.tabs .tabs-item .tabs-item-description {
   font-size: 1.8rem;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.tabs .tabs-item-selected {
+  display: block;
+}
+.tabs .tabs-links {
+  display: flex;
+  background-color: #6A25F8;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .tabs .tabs-links {
+    flex-direction: column;
+  }
+}
+.tabs .tabs-link {
+  padding: 20px 25px;
+  font-size: 24px;
+  background-color: #6A25F8;
+  border-right: 1px solid blue;
+  color: white;
+  cursor: pointer;
+}
+.tabs .tabs-link:hover {
+  background-color: black;
+  text-shadow: 0 0 5px blue;
+  color: #6A25F8;
+}
+.tabs .tabs-link-selected {
+  z-index: 2;
+  border-right: 1px solid #6A25F8;
+  background-color: black;
+  color: #6A25F8;
+}
+.tabs .tabs-link-selected:hover {
+  text-shadow: 0 0 5px blue;
+}
+.carousel {
+  height: auto !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  border-radius: 25px !important;
+}
+.carousel img,
+.carousel .carousel-inner {
+  border-radius: 25px !important;
 }
