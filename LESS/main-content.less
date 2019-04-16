@@ -1,7 +1,7 @@
 .main-content {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 
     .header-container {
         display: flex;
@@ -26,15 +26,26 @@
             border-radius: 15px;
             padding: 10px;
             margin-bottom: 1rem;
+            font-family: Hiruko;
+            letter-spacing: 3px;
         }
 
-        button {
+        .sign-up-btn {
             background: #6A25F8;
             box-shadow: 0 0 10px blue;
             border: none;
-            padding: 15px;
+            padding: 10px 10px 15px 10px;
             border-radius: 25px;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+            font-family: 'Roboto';
+            text-transform: lowercase;
+            font-weight: bold;
+
+        &:hover {
+            background: black;
+            color: #6A25F8;
+            cursor: pointer;
+        }
         }
     }
         
@@ -57,19 +68,18 @@
 .products-and-features {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    border-bottom: 1px dashed blue;
+    border-radius: 15px;
 
     .products,
     .features {
-      margin-right: 1rem;
-      margin-left: 1rem;
-      margin-bottom: 5rem;
-      margin-top: 1rem;
+      margin-bottom: 4rem;
       padding: 10px;
       background: #6A25F8;
       border-radius: 15px;
-      box-shadow: 0 0 5px blue;
+      box-shadow: 0 0 10px blue;
       width: 45%;
     }
 

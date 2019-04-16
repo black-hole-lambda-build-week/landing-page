@@ -174,6 +174,10 @@ img {
   background: #060406;
   opacity: 0.9;
 }
+@font-face {
+  font-family: Hiruko;
+  src: url('../HirukoBlackAlternate.ttf');
+}
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -183,6 +187,7 @@ img {
   position: fixed;
   opacity: 0.6;
   z-index: 3;
+  width: 100%;
 }
 .navigation .logo {
   align-self: center;
@@ -216,16 +221,14 @@ img {
 }
 .footer {
   font-size: 2rem;
-  border-top: 1px dashed blue;
-  height: 12rem;
   color: #6A25F8;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 .main-content {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
 }
 .main-content .header-container {
   display: flex;
@@ -250,14 +253,24 @@ img {
   border-radius: 15px;
   padding: 10px;
   margin-bottom: 1rem;
+  font-family: Hiruko;
+  letter-spacing: 3px;
 }
-.main-content .intro button {
+.main-content .intro .sign-up-btn {
   background: #6A25F8;
   box-shadow: 0 0 10px blue;
   border: none;
-  padding: 15px;
+  padding: 10px 10px 15px 10px;
   border-radius: 25px;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  font-family: 'Roboto';
+  text-transform: lowercase;
+  font-weight: bold;
+}
+.main-content .intro .sign-up-btn:hover {
+  background: black;
+  color: #6A25F8;
+  cursor: pointer;
 }
 .main-content .pulsing {
   text-shadow: 0 0 5px blue;
@@ -278,19 +291,18 @@ img {
 .products-and-features {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  border-bottom: 1px dashed blue;
+  border-radius: 15px;
 }
 .products-and-features .products,
 .products-and-features .features {
-  margin-right: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 5rem;
-  margin-top: 1rem;
+  margin-bottom: 4rem;
   padding: 10px;
   background: #6A25F8;
   border-radius: 15px;
-  box-shadow: 0 0 5px blue;
+  box-shadow: 0 0 10px blue;
   width: 45%;
 }
 .products-and-features .products,
