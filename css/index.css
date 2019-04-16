@@ -318,9 +318,10 @@ img {
   margin-bottom: 1rem;
 }
 .main-content .header-container .intro .sign-up-btn:hover {
-  background: hotpink;
+  background: black;
   color: #6A25F8;
   cursor: pointer;
+  text-shadow: 0 0 5px blue;
 }
 .main-content .pulsing {
   text-shadow: 0 0 5px blue;
@@ -374,11 +375,10 @@ img {
   color: #6A25F8;
   width: 75%;
 }
-.tabs .tabs-item .tabs-item-title {
-  font-size: 24px;
-  font-weight: bold;
+.tabs .tabs-item .tabs-item-description {
+  font-size: 1.8rem;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .tabs .tabs-item-selected {
   display: block;
@@ -391,19 +391,21 @@ img {
   padding: 20px 25px;
   font-size: 24px;
   background-color: #6A25F8;
-  border-right: 1px solid white;
+  border-right: 1px solid blue;
   color: white;
   cursor: pointer;
 }
 .tabs .tabs-link:hover {
-  background-color: hotpink;
+  background-color: black;
+  text-shadow: 0 0 5px blue;
+  color: #6A25F8;
 }
 .tabs .tabs-link-selected {
   z-index: 2;
   border-right: 1px solid #6A25F8;
-  background-color: white;
+  background-color: black;
   color: #6A25F8;
 }
 .tabs .tabs-link-selected:hover {
-  background-color: white;
+  text-shadow: 0 0 5px blue;
 }

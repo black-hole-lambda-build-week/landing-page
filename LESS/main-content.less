@@ -62,9 +62,10 @@
                 margin-bottom: 1rem;
     
             &:hover {
-                background: hotpink;
+                background: black;
                 color: #6A25F8;
                 cursor: pointer;
+                text-shadow: 0 0 5px blue;
             }
          }
       }
@@ -120,11 +121,10 @@
       color: @accentColor;
   
       width: 75%;
-      .tabs-item-title {
-        font-size: 24px;
-        font-weight: bold;
+      .tabs-item-description {
+        font-size: 1.8rem;
         padding-bottom: 10px;
-        padding-top: 10px;
+        padding-top: 20px;
       }
     }
     .tabs-item-selected {
@@ -140,20 +140,22 @@
       padding: 20px 25px;
       font-size: 24px;
       background-color: @accentColor;
-      border-right: 1px solid white;
+      border-right: 1px solid blue;
       color: white;
       cursor: pointer;
       &:hover {
-        background-color: hotpink;
+        background-color: black;
+        text-shadow: 0 0 5px blue;
+        color: @accentColor;
       }
     }
     .tabs-link-selected {
       z-index: 2;
       border-right: 1px solid @accentColor;
-      background-color: white;
+      background-color: black;
       color: @accentColor;
       &:hover {
-        background-color: white;
+        text-shadow: 0 0 5px blue;
       }
     }
   }
