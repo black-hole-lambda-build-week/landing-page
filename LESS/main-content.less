@@ -20,6 +20,10 @@
         .blackhole {
             width: 55%;
             height: 100%;
+
+        @media @mobile {
+          width: 100%;
+        }
         }
         .intro {
             display: flex;
@@ -27,6 +31,10 @@
             flex-direction: column;
             align-items: center;
             height: 60%;
+
+            @media @mobile {
+              max-width: 300px;
+            }
     
             h1 {
                 z-index: 2;
@@ -68,19 +76,20 @@
         
     .pulsing {
         text-shadow: 0 0 5px blue;
-
+        font-size: 2.8rem;
+        font-family: Hiruko;
         animation-name: appear;
         animation-iteration-count: infinite;
         animation-duration: 3s;
         animation-direction: alternate;
-        animation-delay: 2s;
 
         @keyframes appear {
            from {opacity: 0.1}
             to {opacity: 1}
         }
-        @media @laptop {
-            font-size: 2.8rem;
+
+         @media @mobile {
+           font-size: 2.2rem;
          }
     }
 }
@@ -91,7 +100,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+
 
 .section {
     width: 100%;
@@ -99,7 +108,7 @@
     display: flex;
     border: 1px solid @accentColor;
     box-shadow: 1px 1px 5px blue;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     .box {
       padding: 40px;
@@ -153,9 +162,9 @@
       padding: 20px 25px;
       font-size: 24px;
       background-color: black;
-      border-right: 1px solid blue;
-      color: white;
+      color: @accentColor;
       cursor: pointer;
+      box-shadow: 0 0 10px blue;
       &:hover {
         background-color: @accentColor;
         text-shadow: 0 0 5px blue;
@@ -187,6 +196,7 @@
     }
   }
 }
+}
 
 
 // About page styling begins here, this comment will not appear in the CSS file
@@ -210,7 +220,6 @@
     h1 {
       align-self: flex-start;
     }
-
     .member {
       height: 175px;
       width: 45%;
@@ -218,16 +227,38 @@
       opacity: 0.8;
       margin: 1%;
       align-self: center;
-      border-radius: 25px;
-      box-shadow: 0 0 10px blue;
+      border-radius: 5px;
+      border: 1px solid blue;
+      overflow: hidden;
 
       display: flex;
       justify-content: space-between;
+
+      &:hover {
+        box-shadow: 0 0 10px blue;
+      }
+
+      @media @tablet {
+        width: 60%;
+        flex-direction: column;
+        height: auto;
+      }
+
+      @media @mobile {
+        width: 90%;
+      }
 
       img {
         height: 95%;
         border-radius: 50%;
         margin: 1%;
+        width: auto;
+
+        @media @tablet {
+          height: auto;
+          width: 50%;
+          align-self: center;
+        }
       }
 
       .text {
@@ -235,10 +266,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: auto;
       }
 
       h2 {
-        // align-self: flex-start;
         color: @accentColor;
         text-shadow: 0 0 10px blue;
         font-family: Hiruko;
@@ -248,7 +279,7 @@
         text-align: center;
 
         @media @mobile {
-          display: none;
+          font-size: 3rem;
         }
       }
       p {
@@ -258,12 +289,9 @@
       .fab {
        color: @accentColor;
        padding: 5px;
-
-       @media @mobile {
-        display: none;
-      }
       }
     }
   }
 }
 }
+
