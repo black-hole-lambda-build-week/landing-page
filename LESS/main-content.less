@@ -1,15 +1,7 @@
-.main-content {
+.home {
+  .main-content {
     display: flex;
     flex-direction: column;
-    height: auto;
-
-    @media @laptop {
-        height: auto;
-    }
-
-    @media @mobile {
-        height: auto;
-    }
 
     .header-container {
         display: flex;
@@ -23,7 +15,6 @@
         }
     
         @media @mobile {
-            flex-direction: column;
             margin-top: 30%;
         }
         .blackhole {
@@ -192,5 +183,40 @@
       border-radius: 25px !important;
     }
   }
+}
 
 
+// About page styling begins here, this comment will not appear in the CSS file
+
+.about {
+ 
+  .container {
+    background-image: url('../img/bg2.jpg');
+    height: 100vh;
+
+    .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90vh;
+    align-content: stretch;
+    padding: 10% 0 2% 0;
+    
+    h1 {
+      align-self: flex-start;
+    }
+
+    .member {
+      height: 175px;
+      width: 48%;
+      background: @accentColor;
+      opacity: 0.7;
+      margin: 1%;
+      align-self: center;
+      border-radius: 25px;
+      box-shadow: 0 0 10px blue;
+    }
+  }
+}
+}
