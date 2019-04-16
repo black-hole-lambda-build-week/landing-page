@@ -8,12 +8,20 @@
         opacity: 0.6;
         z-index: 3;
         width: 100%;
+
+        @media @mobile {
+            flex-direction: column;
+        }
         
         .logo {
             align-self: center;
             height: auto;
             width: 20%;
             margin-left: 5%;
+
+            @media @mobile {
+                width: 70%;
+            }
         }
         
         .nav-links {
@@ -28,6 +36,10 @@
 
             @media @tablet {
             width: 50%;
+            }
+
+            @media @mobile {
+            width: 100%;
             }
 
         a {

@@ -189,11 +189,21 @@ img {
   z-index: 3;
   width: 100%;
 }
+@media (max-width: 600px) {
+  .navigation {
+    flex-direction: column;
+  }
+}
 .navigation .logo {
   align-self: center;
   height: auto;
   width: 20%;
   margin-left: 5%;
+}
+@media (max-width: 600px) {
+  .navigation .logo {
+    width: 70%;
+  }
 }
 .navigation .nav-links {
   display: flex;
@@ -209,6 +219,11 @@ img {
 @media (max-width: 800px) {
   .navigation .nav-links {
     width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .navigation .nav-links {
+    width: 100%;
   }
 }
 .navigation .nav-links a {
@@ -240,28 +255,46 @@ img {
   flex-direction: column;
   height: 90vh;
 }
+@media (max-width: 800px) {
+  .main-content {
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .main-content {
+    height: auto;
+  }
+}
 .main-content .header-container {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   margin-top: 8%;
-}
-.main-content .blackhole {
-  width: 55%;
+  margin-bottom: 2rem;
 }
 @media (max-width: 800px) {
-  .main-content .blackhole {
-    width: 40%;
+  .main-content .header-container {
+    flex-direction: column;
   }
 }
-.main-content .intro {
+@media (max-width: 600px) {
+  .main-content .header-container {
+    flex-direction: column;
+    margin-top: 30%;
+  }
+}
+.main-content .header-container .blackhole {
+  width: 55%;
+  height: 100%;
+}
+.main-content .header-container .intro {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   height: 60%;
 }
-.main-content .intro h1 {
+.main-content .header-container .intro h1 {
   z-index: 2;
   font-size: 6rem;
   border-bottom: 1px dashed blue;
@@ -271,7 +304,7 @@ img {
   font-family: Hiruko;
   letter-spacing: 3px;
 }
-.main-content .intro .sign-up-btn {
+.main-content .header-container .intro .sign-up-btn {
   background: #6A25F8;
   box-shadow: 0 0 10px blue;
   border: none;
@@ -282,7 +315,7 @@ img {
   text-transform: lowercase;
   font-weight: bold;
 }
-.main-content .intro .sign-up-btn:hover {
+.main-content .header-container .intro .sign-up-btn:hover {
   background: black;
   color: #6A25F8;
   cursor: pointer;
@@ -301,6 +334,11 @@ img {
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 1200px) {
+  .main-content .pulsing {
+    font-size: 2.8rem;
   }
 }
 .products-and-features {

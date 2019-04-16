@@ -3,54 +3,69 @@
     flex-direction: column;
     height: 90vh;
 
+    @media @tablet {
+        height: auto;
+    }
+
+    @media @mobile {
+        height: auto;
+    }
+
     .header-container {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         margin-top: 8%;
-    }
-    .blackhole {
-        width: 55%;
+        margin-bottom: 2rem;
 
         @media @tablet {
-            width: 40%;
+            flex-direction: column;
         }
-    }
-    .intro {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-        height: 60%;
-
-        h1 {
-            z-index: 2;
-            font-size: 6rem;
-            border-bottom: 1px dashed blue;
-            border-radius: 15px;
-            padding: 10px;
-            margin-bottom: 1rem;
-            font-family: Hiruko;
-            letter-spacing: 3px;
+    
+        @media @mobile {
+            flex-direction: column;
+            margin-top: 30%;
         }
-
-        .sign-up-btn {
-            background: #6A25F8;
-            box-shadow: 0 0 10px blue;
-            border: none;
-            padding: 10px 10px 15px 10px;
-            border-radius: 25px;
-            font-size: 2.2rem;
-            font-family: 'Roboto';
-            text-transform: lowercase;
-            font-weight: bold;
-
-        &:hover {
-            background: black;
-            color: #6A25F8;
-            cursor: pointer;
+        .blackhole {
+            width: 55%;
+            height: 100%;
         }
-        }
+        .intro {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            height: 60%;
+    
+            h1 {
+                z-index: 2;
+                font-size: 6rem;
+                border-bottom: 1px dashed blue;
+                border-radius: 15px;
+                padding: 10px;
+                margin-bottom: 1rem;
+                font-family: Hiruko;
+                letter-spacing: 3px;
+            }
+    
+            .sign-up-btn {
+                background: #6A25F8;
+                box-shadow: 0 0 10px blue;
+                border: none;
+                padding: 10px 10px 15px 10px;
+                border-radius: 25px;
+                font-size: 2.2rem;
+                font-family: 'Roboto';
+                text-transform: lowercase;
+                font-weight: bold;
+    
+            &:hover {
+                background: black;
+                color: #6A25F8;
+                cursor: pointer;
+            }
+         }
+      }
     }
         
     .pulsing {
@@ -66,6 +81,9 @@
            from {opacity: 0.1}
             to {opacity: 1}
         }
+        @media @laptop {
+            font-size: 2.8rem;
+         }
     }
 }
 
