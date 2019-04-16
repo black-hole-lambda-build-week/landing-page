@@ -250,25 +250,14 @@ img {
   padding-top: 3rem;
   height: 10%;
   padding-bottom: 2rem;
-  position: relative;
-  bottom: 0;
+  display: flex;
+  justify-content: center;
 }
-.main-content {
+.home .main-content {
   display: flex;
   flex-direction: column;
-  height: auto;
 }
-@media (max-width: 1200px) {
-  .main-content {
-    height: auto;
-  }
-}
-@media (max-width: 500px) {
-  .main-content {
-    height: auto;
-  }
-}
-.main-content .header-container {
+.home .main-content .header-container {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -276,28 +265,27 @@ img {
   margin: 8% auto 0 auto;
 }
 @media (max-width: 1200px) {
-  .main-content .header-container {
+  .home .main-content .header-container {
     flex-direction: column;
   }
 }
 @media (max-width: 500px) {
-  .main-content .header-container {
-    flex-direction: column;
+  .home .main-content .header-container {
     margin-top: 30%;
   }
 }
-.main-content .header-container .blackhole {
+.home .main-content .header-container .blackhole {
   width: 55%;
   height: 100%;
 }
-.main-content .header-container .intro {
+.home .main-content .header-container .intro {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   height: 60%;
 }
-.main-content .header-container .intro h1 {
+.home .main-content .header-container .intro h1 {
   z-index: 2;
   font-size: 6rem;
   border-bottom: 1px dashed blue;
@@ -307,7 +295,7 @@ img {
   font-family: Hiruko;
   letter-spacing: 3px;
 }
-.main-content .header-container .intro .sign-up-btn {
+.home .main-content .header-container .intro .sign-up-btn {
   background: #6A25F8;
   box-shadow: 0 0 10px blue;
   border: none;
@@ -320,17 +308,17 @@ img {
   margin-top: 1rem;
 }
 @media (max-width: 1200px) {
-  .main-content .header-container .intro .sign-up-btn {
+  .home .main-content .header-container .intro .sign-up-btn {
     margin-bottom: 3rem;
   }
 }
-.main-content .header-container .intro .sign-up-btn:hover {
+.home .main-content .header-container .intro .sign-up-btn:hover {
   background: black;
   color: #6A25F8;
   cursor: pointer;
   text-shadow: 0 0 5px blue;
 }
-.main-content .pulsing {
+.home .main-content .pulsing {
   text-shadow: 0 0 5px blue;
   animation-name: appear;
   animation-iteration-count: infinite;
@@ -347,17 +335,17 @@ img {
   }
 }
 @media (max-width: 1200px) {
-  .main-content .pulsing {
+  .home .main-content .pulsing {
     font-size: 2.8rem;
   }
 }
-.sub-container {
+.home .sub-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.section {
+.home .section {
   width: 100%;
   margin: 20px;
   display: flex;
@@ -366,52 +354,52 @@ img {
   border-radius: 10px;
   overflow: hidden;
 }
-.section .box {
+.home .section .box {
   padding: 40px;
 }
-.section .box .box-title {
+.home .section .box .box-title {
   font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
 }
-.tabs {
+.home .tabs {
   width: 100%;
 }
-.tabs .tabs-items {
+.home .tabs .tabs-items {
   width: 100%;
   height: 20vh;
   display: flex;
   justify-content: center;
 }
 @media (max-width: 1200px) {
-  .tabs .tabs-items {
+  .home .tabs .tabs-items {
     height: auto;
   }
 }
-.tabs .tabs-item {
+.home .tabs .tabs-item {
   display: none;
   color: #6A25F8;
   width: 75%;
 }
-.tabs .tabs-item .tabs-item-description {
+.home .tabs .tabs-item .tabs-item-description {
   font-size: 1.8rem;
   padding-bottom: 10px;
   padding-top: 20px;
 }
-.tabs .tabs-item-selected {
+.home .tabs .tabs-item-selected {
   display: block;
 }
-.tabs .tabs-links {
+.home .tabs .tabs-links {
   display: flex;
   background-color: #6A25F8;
   flex-direction: column;
 }
 @media (max-width: 800px) {
-  .tabs .tabs-links {
+  .home .tabs .tabs-links {
     flex-direction: column;
   }
 }
-.tabs .tabs-link {
+.home .tabs .tabs-link {
   padding: 20px 25px;
   font-size: 24px;
   background-color: #6A25F8;
@@ -419,27 +407,72 @@ img {
   color: white;
   cursor: pointer;
 }
-.tabs .tabs-link:hover {
+.home .tabs .tabs-link:hover {
   background-color: black;
   text-shadow: 0 0 5px blue;
   color: #6A25F8;
 }
-.tabs .tabs-link-selected {
+.home .tabs .tabs-link-selected {
   z-index: 2;
   border-right: 1px solid #6A25F8;
   background-color: black;
   color: #6A25F8;
 }
-.tabs .tabs-link-selected:hover {
+.home .tabs .tabs-link-selected:hover {
   text-shadow: 0 0 5px blue;
 }
-.carousel {
+.home .carousel {
   height: auto !important;
   width: 100% !important;
   margin: 0 auto !important;
   border-radius: 25px !important;
+  margin-bottom: 10rem !important;
 }
-.carousel img,
-.carousel .carousel-inner {
+.home .carousel img,
+.home .carousel .carousel-inner {
   border-radius: 25px !important;
+}
+.about .container {
+  background-image: url('../img/bg1.jpg');
+  opacity: 0.7;
+  height: 100vh;
+}
+.about .container .boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 90vh;
+  align-content: stretch;
+  padding: 10% 0 2% 0;
+}
+.about .container .boxes h1 {
+  align-self: flex-start;
+}
+.about .container .boxes .member {
+  height: 175px;
+  width: 48%;
+  background: #6A25F8;
+  opacity: 0.8;
+  margin: 1%;
+  align-self: center;
+  border-radius: 25px;
+  box-shadow: 0 0 10px blue;
+  display: flex;
+  justify-content: space-between;
+}
+.about .container .boxes .member img {
+  height: 95%;
+  border-radius: 50%;
+  margin: 1%;
+}
+.about .container .boxes .member h2 {
+  align-self: center;
+  color: black;
+  font-family: Hiruko;
+  font-size: 2.6rem;
+  padding-right: 3%;
+}
+.about .container .boxes .member p {
+  color: black;
 }

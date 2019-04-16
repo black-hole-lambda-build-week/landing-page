@@ -1,15 +1,7 @@
-.main-content {
+.home {
+  .main-content {
     display: flex;
     flex-direction: column;
-    height: auto;
-
-    @media @laptop {
-        height: auto;
-    }
-
-    @media @mobile {
-        height: auto;
-    }
 
     .header-container {
         display: flex;
@@ -23,7 +15,6 @@
         }
     
         @media @mobile {
-            flex-direction: column;
             margin-top: 30%;
         }
         .blackhole {
@@ -186,11 +177,68 @@
     width: 100% !important;
     margin: 0 auto !important;
     border-radius: 25px !important;
+    margin-bottom: 10rem !important;
 
     img,
     .carousel-inner {
       border-radius: 25px !important;
     }
   }
+}
 
 
+// About page styling begins here, this comment will not appear in the CSS file
+
+.about {
+ 
+  .container {
+    background-image: url('../img/bg1.jpg');
+    opacity: 0.7;
+    height: 100vh;
+
+    .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90vh;
+    align-content: stretch;
+    padding: 10% 0 2% 0;
+    
+    h1 {
+      align-self: flex-start;
+    }
+
+    .member {
+      height: 175px;
+      width: 48%;
+      background: @accentColor;
+      opacity: 0.8;
+      margin: 1%;
+      align-self: center;
+      border-radius: 25px;
+      box-shadow: 0 0 10px blue;
+
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        height: 95%;
+        border-radius: 50%;
+        margin: 1%;
+      }
+
+      h2 {
+        align-self: center;
+        color: black;
+        font-family: Hiruko;
+        font-size: 2.6rem;
+        padding-right: 3%;
+      }
+      p {
+        color: black;
+      }
+    }
+  }
+}
+}
