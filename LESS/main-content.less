@@ -177,6 +177,7 @@
     width: 100% !important;
     margin: 0 auto !important;
     border-radius: 25px !important;
+    margin-bottom: 10rem !important;
 
     img,
     .carousel-inner {
@@ -191,7 +192,8 @@
 .about {
  
   .container {
-    background-image: url('../img/bg2.jpg');
+    background-image: url('../img/bg1.jpg');
+    opacity: 0.7;
     height: 100vh;
 
     .boxes {
@@ -211,11 +213,31 @@
       height: 175px;
       width: 48%;
       background: @accentColor;
-      opacity: 0.7;
+      opacity: 0.8;
       margin: 1%;
       align-self: center;
       border-radius: 25px;
       box-shadow: 0 0 10px blue;
+
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        height: 95%;
+        border-radius: 50%;
+        margin: 1%;
+      }
+
+      h2 {
+        align-self: center;
+        color: black;
+        font-family: Hiruko;
+        font-size: 2.6rem;
+        padding-right: 3%;
+      }
+      p {
+        color: black;
+      }
     }
   }
 }
