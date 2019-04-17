@@ -7,8 +7,7 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        margin-bottom: 30%;
-        margin: 8% auto 0 auto;
+        margin: 10% auto 5% 5%;
 
         @media @laptop {
             flex-direction: column;
@@ -37,15 +36,15 @@
             }
     
             h1 {
-                z-index: 2;
-                font-size: 6rem;
                 border-bottom: 1px dashed blue;
                 border-radius: 15px;
-                padding: 10px;
                 margin-bottom: 1rem;
-                font-family: Hiruko;
-                letter-spacing: 3px;
-                text-shadow: 0 0 10px blue;
+                padding-right: 2%;
+                padding-left: 2%;
+
+                @media @laptop {
+                  width: 75%;
+                }
             }
     
             .sign-up-btn {
@@ -75,8 +74,8 @@
     }
         
     .pulsing {
-        text-shadow: 0 0 5px blue;
-        font-size: 2.8rem;
+        padding-top: 2rem;
+        font-size: 3.2rem;
         font-family: Hiruko;
         animation-name: appear;
         animation-iteration-count: infinite;
@@ -85,7 +84,7 @@
 
         @keyframes appear {
            from {opacity: 0.1}
-            to {opacity: 1}
+            to {opacity: 1; text-shadow: 0 0 5px blue;}
         }
 
          @media @mobile {
@@ -107,13 +106,11 @@
     margin: 20px;
     display: flex;
     border: 1px solid @accentColor;
-    box-shadow: 1px 1px 5px blue;
     border-radius: 5px;
     overflow: hidden;
     .box {
       padding: 40px;
       .box-title {
-        font-size: 24px;
         padding-bottom: 10px;
         font-weight: bold;
       }
@@ -125,7 +122,7 @@
 
     .tabs-items {
       width: 100%;
-      height: 20vh;
+      height: 30vh;
       display: flex;
       justify-content: center;
 
@@ -136,12 +133,16 @@
     .tabs-item {
       display: none; 
       color: @accentColor;
-  
       width: 75%;
       .tabs-item-description {
-        font-size: 1.8rem;
         padding-bottom: 10px;
         padding-top: 20px;
+        height: 100%;
+        p {
+          line-height: 1.5;
+          height: 100%;
+          font-size: 1.8rem;
+        }
       }
     }
     .tabs-item-selected {
@@ -150,8 +151,7 @@
   
     .tabs-links {
       display: flex;
-      background-color: @accentColor;
-      flex-direction: column;
+      background-color: none;
       
       @media @tablet {
           flex-direction: column;
@@ -160,11 +160,11 @@
   
     .tabs-link {
       padding: 20px 25px;
-      font-size: 24px;
+      font-size: 2.4rem;
       background-color: black;
       color: @accentColor;
+      border: 1px solid @accentColor;
       cursor: pointer;
-      box-shadow: 0 0 10px blue;
       &:hover {
         background-color: @accentColor;
         text-shadow: 0 0 5px blue;
@@ -173,7 +173,7 @@
     }
     .tabs-link-selected {
       z-index: 2;
-      border-right: 1px solid blue;
+      border-right: 1px solid @accentColor;
       background-color: @accentColor;
       color: black;
 
@@ -187,12 +187,12 @@
     height: auto !important;
     width: 100% !important;
     margin: 0 auto !important;
-    border-radius: 25px !important;
+    border-radius: 5px !important;
     margin-bottom: 1rem !important;
 
     img,
     .carousel-inner {
-      border-radius: 25px !important;
+      border-radius: 5px !important;
     }
   }
 }
@@ -202,37 +202,48 @@
 // About page styling begins here, this comment will not appear in the CSS file
 
 .about {
- 
-  .container {
-    background-image: url('../img/bg1.jpg');
-    opacity: 0.5;
-    height: auto;
 
     .boxes {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     flex-wrap: wrap;
-    height: 90vh;
-    align-content: stretch;
+    height: auto;
     padding: 12% 0 2% 0;
+    max-width: 1200px;
+    width: 100%;
+
+    @media @tablet {
+      height: auto;
+      padding-top: 10%;
+    }
+
+    @media @mobile {
+      padding-top: 30%;
+    }
     
-    h1 {
-      align-self: flex-start;
+    h2 {
+      font-size: 3.6rem !important;
+      align-self: center !important;
+
+    @media @laptop {
+      font-size: 2.8rem !important;
+      .test;
+    }
     }
     .member {
-      height: 175px;
-      width: 45%;
+      width: 20%;
       background: #060406;
       opacity: 0.8;
       margin: 1%;
-      align-self: center;
+      // align-self: center;
       border-radius: 5px;
       border: 1px solid blue;
       overflow: hidden;
 
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      // justify-content: space-between;
 
       &:hover {
         box-shadow: 0 0 10px blue;
@@ -249,10 +260,12 @@
       }
 
       img {
-        height: 95%;
+        padding-top: 3%;
+        height: auto;
         border-radius: 50%;
         margin: 1%;
-        width: auto;
+        width: 50%;
+        align-self: center;
 
         @media @tablet {
           height: auto;
@@ -292,6 +305,5 @@
       }
     }
   }
-}
 }
 
