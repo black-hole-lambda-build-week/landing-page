@@ -52,7 +52,7 @@ class TabLink {
   animationBtn.addEventListener('click', (event) => { 
     console.log ('Hey Lambda Staff!');
     heading.classList.add('blackholeAnimation');
-    
+  
     secondHeading.classList.remove('pulsing');
     secondHeading.classList.add('blackholeAnimation');
     setTimeout(function(){ heading.classList.remove('blackholeAnimation') }, 5000)

@@ -273,7 +273,7 @@ img {
 .navigation .nav-links a:hover {
   border-bottom: 1px dashed blue;
   text-shadow: 0 0 5px blue;
-  color: #6A25F8;
+  color: whitesmoke;
 }
 .footer {
   font-size: 2rem;
@@ -295,8 +295,6 @@ img {
   align-items: center;
   margin: 8% auto 0 5%;
   height: 80vh;
-}
-@media (max-width: 800px) {
 }
 @media (max-width: 500px) {
   .home .main-content .header-container {
@@ -368,7 +366,10 @@ img {
   color: whitesmoke;
   transition: 0.2s ease-out;
 }
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
+  .home .main-content .header-container .intro .blackhole-btn {
+    top: 45vh;
+  }
 }
 .home .main-content .header-container .intro .blackhole-btn:hover {
   background: black;
@@ -385,7 +386,7 @@ img {
 .home .main-content .buttons .login-btn {
   background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
   box-shadow: 0 0 10px blue;
-  padding: 10px 30px;
+  padding: 5px 30px;
   border-radius: 5px;
   color: whitesmoke;
   cursor: pointer;
@@ -521,7 +522,7 @@ img {
   width: 70% !important;
   margin: 0 auto !important;
   border-radius: 5px !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 5rem !important;
 }
 @media (max-width: 500px) {
   .home .sub-container .carousel {
@@ -540,8 +541,8 @@ img {
   from {
     transform: rotate(0deg);
     border: none;
-    height: 100%;
     width: 100%;
+    height: 100%;
   }
   to {
     transform: rotate(360deg);
@@ -550,6 +551,10 @@ img {
     border: none;
     font-size: 0;
   }
+}
+.button-holder {
+  position: fixed;
+  top: 55vh;
 }
 .about .boxes {
   display: flex;
