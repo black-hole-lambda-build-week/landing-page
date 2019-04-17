@@ -16,6 +16,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+
+  @media @mobile {
+    background: black;
+  }
 }
 
   h1, h2, h3, h4, h5 {
@@ -57,6 +61,12 @@ body {
     margin: 0 auto;
     background: #060406;
     opacity: 0.8;
+
+    @media @mobile {
+      background: none;
+      opacity: 0.9;
+
+    }
   }
 
   @font-face { font-family: Hiruko; src: url('../HirukoBlackAlternate.ttf'); } 
