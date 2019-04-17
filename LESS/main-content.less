@@ -222,23 +222,22 @@
       padding-top: 30%;
     }
     
-    h2 {
-      font-size: 3.6rem !important;
-      align-self: center !important;
+    // h2 {
+    //   font-size: 3.6rem !important;
+    //   align-self: center !important;
 
-    @media @laptop {
-      font-size: 2.8rem !important;
-      .test;
-    }
-    }
+    // @media @laptop {
+    //   font-size: 2.8rem !important;
+    //   .test;
+    //}
+
     .member {
       width: 20%;
       background: #060406;
       opacity: 0.8;
       margin: 1%;
-      // align-self: center;
       border-radius: 5px;
-      border: 1px solid blue;
+      border: 1px solid @accentColor;
       overflow: hidden;
 
       display: flex;
@@ -249,8 +248,12 @@
         box-shadow: 0 0 10px blue;
       }
 
+      @media @laptop {
+        width: 40%;
+      }
+
       @media @tablet {
-        width: 60%;
+        width: 50%;
         flex-direction: column;
         height: auto;
       }
@@ -260,12 +263,11 @@
       }
 
       img {
-        padding-top: 3%;
         height: auto;
         border-radius: 50%;
-        margin: 1%;
         width: 50%;
         align-self: center;
+        margin-top: 5%;
 
         @media @tablet {
           height: auto;
@@ -288,11 +290,14 @@
         font-family: Hiruko;
         font-size: 3.5rem;
         padding-top: 20px;
+        padding-right: 5%;
+        padding-left: 5%;
         width: 250px;
         text-align: center;
 
         @media @mobile {
-          font-size: 3rem;
+          padding-top: 0;
+          font-size: 3.5rem !important;
         }
       }
       p {

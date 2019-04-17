@@ -176,6 +176,7 @@ img {
 .container {
   max-width: 1300px !important;
   width: 100% !important;
+  height: 100% !important;
   margin: 0 auto;
   background: #060406;
   opacity: 0.8;
@@ -203,7 +204,7 @@ img {
 .navigation .logo {
   align-self: center;
   height: auto;
-  width: 5%;
+  width: 12%;
   margin-left: 5%;
   padding-top: 5px;
 }
@@ -258,7 +259,8 @@ img {
   background: #060406;
   height: 100px;
   opacity: 0.8;
-  padding-top: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 .home .main-content {
   display: flex;
@@ -475,23 +477,13 @@ img {
     padding-top: 30%;
   }
 }
-.about .boxes h2 {
-  font-size: 3.6rem !important;
-  align-self: center !important;
-}
-@media (max-width: 1200px) {
-  .about .boxes h2 {
-    font-size: 2.8rem !important;
-    border: 1px solid red;
-  }
-}
 .about .boxes .member {
   width: 20%;
   background: #060406;
   opacity: 0.8;
   margin: 1%;
   border-radius: 5px;
-  border: 1px solid blue;
+  border: 1px solid #6A25F8;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -499,9 +491,14 @@ img {
 .about .boxes .member:hover {
   box-shadow: 0 0 10px blue;
 }
+@media (max-width: 1200px) {
+  .about .boxes .member {
+    width: 40%;
+  }
+}
 @media (max-width: 800px) {
   .about .boxes .member {
-    width: 60%;
+    width: 50%;
     flex-direction: column;
     height: auto;
   }
@@ -512,12 +509,11 @@ img {
   }
 }
 .about .boxes .member img {
-  padding-top: 3%;
   height: auto;
   border-radius: 50%;
-  margin: 1%;
   width: 50%;
   align-self: center;
+  margin-top: 5%;
 }
 @media (max-width: 800px) {
   .about .boxes .member img {
@@ -539,12 +535,15 @@ img {
   font-family: Hiruko;
   font-size: 3.5rem;
   padding-top: 20px;
+  padding-right: 5%;
+  padding-left: 5%;
   width: 250px;
   text-align: center;
 }
 @media (max-width: 500px) {
   .about .boxes .member h2 {
-    font-size: 3rem;
+    padding-top: 0;
+    font-size: 3.5rem !important;
   }
 }
 .about .boxes .member p {
