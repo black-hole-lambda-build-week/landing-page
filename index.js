@@ -46,4 +46,16 @@ class TabLink {
 
   const animationBtn = document.querySelector('.sign-up-btn');
 
-  animationBtn.addEventListener('click', (event) => { console.log ('hello')});
+  const heading = document.querySelector('h1');
+  const secondHeading = document.querySelector('h2');
+
+  animationBtn.addEventListener('click', (event) => { 
+    console.log ('Hey Lambda Staff!');
+    heading.classList.add('blackholeAnimation');
+    
+    // secondHeading.classList.remove('pulsing');
+    // secondHeading.classList.add('blackholeAnimation');
+    setTimeout(function(){ heading.classList.remove('blackholeAnimation') }, 2500)
+    // setTimeout(function(){ secondHeading.classList.remove('blackholeAnimation') }, 2500)
+  });
+

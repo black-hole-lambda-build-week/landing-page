@@ -364,10 +364,17 @@ img {
   text-shadow: 0 0 5px blue;
   transform: scale(1.1);
 }
-.home .main-content .pulsing {
+.home .main-content h2 {
   padding-top: 2rem;
   font-size: 3.2rem;
   font-family: 'Roboto';
+}
+@media (max-width: 500px) {
+  .home .main-content h2 {
+    font-size: 2.2rem;
+  }
+}
+.home .main-content .pulsing {
   animation-name: appear;
   animation-iteration-count: infinite;
   animation-duration: 3s;
@@ -380,11 +387,6 @@ img {
   to {
     opacity: 1;
     text-shadow: 0 0 5px blue;
-  }
-}
-@media (max-width: 500px) {
-  .home .main-content .pulsing {
-    font-size: 2.2rem;
   }
 }
 .home .sub-container {
@@ -496,6 +498,23 @@ img {
 .home .sub-container .carousel img,
 .home .sub-container .carousel .carousel-inner {
   border-radius: 5px !important;
+}
+.blackholeAnimation {
+  animation-name: blackhole;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes blackhole {
+  from {
+    transform: rotate(0deg);
+    border: none;
+  }
+  to {
+    transform: rotate(360deg);
+    width: 0;
+    border: none;
+    font-size: 0;
+  }
 }
 .about .boxes {
   display: flex;
