@@ -55,7 +55,7 @@ class TabLink {
     
     // secondHeading.classList.remove('pulsing');
     // secondHeading.classList.add('blackholeAnimation');
-    setTimeout(function(){ heading.classList.remove('blackholeAnimation') }, 2500)
+    setTimeout(function(){ heading.classList.remove('blackholeAnimation') }, 2000)
     // setTimeout(function(){ secondHeading.classList.remove('blackholeAnimation') }, 2500)
   });
 

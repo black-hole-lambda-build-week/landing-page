@@ -503,6 +503,7 @@ img {
   animation-name: blackhole;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 @keyframes blackhole {
   from {
