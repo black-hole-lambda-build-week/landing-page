@@ -10,7 +10,7 @@
         width: 100%;
 
         @media @mobile {
-            flex-direction: column;
+            height: 75px;
         }
         
         .logo {
@@ -19,10 +19,14 @@
             width: 12%;
             margin-left: 5%;
             padding-top: 5px;
+
+            @media @tablet {
+                width: 20%;
+            }
             
 
             @media @mobile {
-                width: 15%;
+                display: none;
             }
         }
         
@@ -33,7 +37,7 @@
             margin-right: 2%;
 
             @media @laptop {
-                width: 50%;
+            width: 50%;
             }
 
             @media @tablet {
@@ -41,7 +45,7 @@
             }
 
             @media @mobile {
-            width: 100%;
+            width: 95%;
             }
 
         a {

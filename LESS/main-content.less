@@ -14,14 +14,14 @@
         }
     
         @media @mobile {
-            margin-top: 30%;
+            margin-top: 10%;
         }
         .blackhole {
             width: 55%;
             height: 100%;
 
         @media @mobile {
-          width: 100%;
+          display: none;
         }
         }
         .intro {
@@ -32,7 +32,8 @@
             height: 60%;
 
             @media @mobile {
-              max-width: 300px;
+              // max-width: 300px;
+              margin-top: 20%;
             }
     
             h1 {
@@ -44,6 +45,10 @@
 
                 @media @laptop {
                   width: 75%;
+                }
+
+                @media @mobile {
+                  width: 90%;
                 }
             }
     
@@ -222,15 +227,6 @@
       padding-top: 30%;
     }
     
-    // h2 {
-    //   font-size: 3.6rem !important;
-    //   align-self: center !important;
-
-    // @media @laptop {
-    //   font-size: 2.8rem !important;
-    //   .test;
-    //}
-
     .member {
       width: 20%;
       background: #060406;
@@ -242,7 +238,6 @@
 
       display: flex;
       flex-direction: column;
-      // justify-content: space-between;
 
       &:hover {
         box-shadow: 0 0 10px blue;
