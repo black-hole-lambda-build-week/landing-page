@@ -264,6 +264,11 @@ img {
   justify-content: center;
   text-transform: uppercase;
 }
+@media (max-width: 500px) {
+  .navigation .nav-links a {
+    font-size: 1.4rem;
+  }
+}
 .navigation .nav-links a:hover {
   border-bottom: 1px dashed blue;
   text-shadow: 0 0 5px blue;
@@ -287,16 +292,18 @@ img {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 10% auto 5% 5%;
+  margin: 10% auto 0 5%;
+  height: 90vh;
 }
 @media (max-width: 1200px) {
   .home .main-content .header-container {
     flex-direction: column;
+    height: auto;
   }
 }
 @media (max-width: 500px) {
   .home .main-content .header-container {
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 .home .main-content .header-container .blackhole {
@@ -340,16 +347,19 @@ img {
 @media (max-width: 1200px) {
   .home .main-content .header-container .intro h1 {
     width: 40%;
+    max-width: 40%;
   }
 }
 @media (max-width: 800px) {
   .home .main-content .header-container .intro h1 {
     width: 65%;
+    max-width: 65%;
   }
 }
 @media (max-width: 500px) {
   .home .main-content .header-container .intro h1 {
     width: 90%;
+    max-width: 90%;
   }
 }
 .home .main-content .header-container .intro .sign-up-btn {
