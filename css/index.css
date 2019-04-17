@@ -174,8 +174,8 @@ img {
   height: auto;
 }
 .container {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1300px !important;
+  width: 100% !important;
   margin: 0 auto;
   background: #060406;
   opacity: 0.8;
@@ -205,7 +205,7 @@ img {
   height: auto;
   width: 5%;
   margin-left: 5%;
-  padding-top: 1%;
+  padding-top: 5px;
 }
 @media (max-width: 500px) {
   .navigation .logo {
@@ -255,8 +255,10 @@ img {
   font-size: 2rem;
   color: #6A25F8;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  background: #060406;
+  height: 100px;
+  opacity: 0.8;
+  padding-top: 5%;
 }
 .home .main-content {
   display: flex;
@@ -266,8 +268,7 @@ img {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-bottom: 30%;
-  margin: 8% auto 0 auto;
+  margin: 10% auto 5% 5%;
 }
 @media (max-width: 1200px) {
   .home .main-content .header-container {
@@ -304,6 +305,13 @@ img {
   border-bottom: 1px dashed blue;
   border-radius: 15px;
   margin-bottom: 1rem;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+@media (max-width: 1200px) {
+  .home .main-content .header-container .intro h1 {
+    width: 75%;
+  }
 }
 .home .main-content .header-container .intro .sign-up-btn {
   background: #6A25F8;
@@ -329,7 +337,8 @@ img {
   text-shadow: 0 0 5px blue;
 }
 .home .main-content .pulsing {
-  font-size: 2.8rem;
+  padding-top: 2rem;
+  font-size: 3.2rem;
   font-family: Hiruko;
   animation-name: appear;
   animation-iteration-count: infinite;
@@ -368,7 +377,6 @@ img {
   padding: 40px;
 }
 .home .sub-container .section .box .box-title {
-  font-size: 24px;
   padding-bottom: 10px;
   font-weight: bold;
 }
@@ -392,16 +400,21 @@ img {
   width: 75%;
 }
 .home .sub-container .tabs .tabs-item .tabs-item-description {
-  font-size: 1.8rem;
   padding-bottom: 10px;
   padding-top: 20px;
+  height: 100%;
+}
+.home .sub-container .tabs .tabs-item .tabs-item-description p {
+  line-height: 1.5;
+  height: 100%;
+  font-size: 1.8rem;
 }
 .home .sub-container .tabs .tabs-item-selected {
   display: block;
 }
 .home .sub-container .tabs .tabs-links {
   display: flex;
-  background-color: black;
+  background-color: none;
 }
 @media (max-width: 800px) {
   .home .sub-container .tabs .tabs-links {
@@ -410,7 +423,7 @@ img {
 }
 .home .sub-container .tabs .tabs-link {
   padding: 20px 25px;
-  font-size: 24px;
+  font-size: 2.4rem;
   background-color: black;
   color: #6A25F8;
   border: 1px solid #6A25F8;
@@ -434,37 +447,54 @@ img {
   height: auto !important;
   width: 100% !important;
   margin: 0 auto !important;
-  border-radius: 25px !important;
+  border-radius: 5px !important;
   margin-bottom: 1rem !important;
 }
 .home .sub-container .carousel img,
 .home .sub-container .carousel .carousel-inner {
-  border-radius: 25px !important;
+  border-radius: 5px !important;
 }
 .about .boxes {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   flex-wrap: wrap;
-  height: 90vh;
-  align-content: stretch;
+  height: auto;
   padding: 12% 0 2% 0;
+  max-width: 1200px;
+  width: 100%;
 }
-.about .boxes h1 {
-  align-self: flex-start;
+@media (max-width: 800px) {
+  .about .boxes {
+    height: auto;
+    padding-top: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .about .boxes {
+    padding-top: 30%;
+  }
+}
+.about .boxes h2 {
+  font-size: 3.6rem !important;
+  align-self: center !important;
+}
+@media (max-width: 1200px) {
+  .about .boxes h2 {
+    font-size: 2.8rem !important;
+    border: 1px solid red;
+  }
 }
 .about .boxes .member {
-  height: 175px;
-  width: 45%;
+  width: 20%;
   background: #060406;
   opacity: 0.8;
   margin: 1%;
-  align-self: center;
   border-radius: 5px;
   border: 1px solid blue;
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .about .boxes .member:hover {
   box-shadow: 0 0 10px blue;
@@ -482,10 +512,12 @@ img {
   }
 }
 .about .boxes .member img {
-  height: 95%;
+  padding-top: 3%;
+  height: auto;
   border-radius: 50%;
   margin: 1%;
-  width: auto;
+  width: 50%;
+  align-self: center;
 }
 @media (max-width: 800px) {
   .about .boxes .member img {
