@@ -20,6 +20,10 @@
             width: 55%;
             height: 100%;
 
+        @media @laptop {
+          width: 30%;
+        }
+
         @media @mobile {
           display: none;
         }
@@ -30,6 +34,8 @@
             flex-direction: column;
             align-items: center;
             height: 60%;
+            
+          
 
             @media @mobile {
               margin-top: 20%;
@@ -43,7 +49,7 @@
                 padding-left: 2%;
 
                 @media @laptop {
-                  width: 75%;
+                  width: 40%;
                 }
 
                 @media @mobile {
@@ -156,19 +162,25 @@
     .tabs-links {
       display: flex;
       // background-color: none;
-      
-      @media @tablet {
-          flex-direction: column-reverse;
-      }
     }
   
     .tabs-link {
-      padding: 20px 25px;
+      padding: 10px 25px;
       font-size: 2.4rem;
       background-color: black;
       color: @accentColor;
       border: 1px solid @accentColor;
       cursor: pointer;
+      width: 100%;
+      text-align: center;
+
+      @media @tablet {
+        font-size: 1.8rem;
+    }
+    @media @mobile {
+      font-size: 1.6rem;
+      padding: 0;
+  }
       &:hover {
         background-color: @accentColor;
         text-shadow: 0 0 5px blue;
@@ -176,7 +188,6 @@
       }
     }
     .tabs-link-selected {
-      // z-index: 2;
       border-right: 1px solid @accentColor;
       background-color: @accentColor;
       color: black;
