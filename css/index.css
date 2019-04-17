@@ -263,6 +263,12 @@ img {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  transition: 0.2s ease-out;
+}
+@media (max-width: 500px) {
+  .navigation .nav-links a {
+    font-size: 1.4rem;
+  }
 }
 .navigation .nav-links a:hover {
   border-bottom: 1px dashed blue;
@@ -287,40 +293,41 @@ img {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 10% auto 5% 5%;
+  margin: 8% auto 0 5%;
+  height: 80vh;
 }
-@media (max-width: 1200px) {
-  .home .main-content .header-container {
-    flex-direction: column;
-  }
+@media (max-width: 800px) {
 }
 @media (max-width: 500px) {
   .home .main-content .header-container {
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 .home .main-content .header-container .blackhole {
   width: 55%;
   height: 100%;
 }
-@media (max-width: 1200px) {
-  .home .main-content .header-container .blackhole {
-    width: 30%;
-  }
-}
 @media (max-width: 800px) {
-  .home .main-content .header-container .blackhole {
-    width: 55%;
-  }
-}
-@media (max-width: 500px) {
   .home .main-content .header-container .blackhole {
     display: none;
   }
 }
+.home .main-content .header-container h2 {
+  font-size: 3.2rem;
+  font-family: 'Roboto';
+}
+@media (max-width: 1200px) {
+  .home .main-content .header-container h2 {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 500px) {
+  .home .main-content .header-container h2 {
+    font-size: 2.2rem;
+  }
+}
 .home .main-content .header-container .intro {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   height: 60%;
@@ -337,22 +344,19 @@ img {
   padding-right: 2%;
   padding-left: 2%;
 }
-@media (max-width: 1200px) {
-  .home .main-content .header-container .intro h1 {
-    width: 40%;
-  }
-}
 @media (max-width: 800px) {
   .home .main-content .header-container .intro h1 {
     width: 65%;
+    max-width: 65%;
   }
 }
 @media (max-width: 500px) {
   .home .main-content .header-container .intro h1 {
     width: 90%;
+    max-width: 90%;
   }
 }
-.home .main-content .header-container .intro .sign-up-btn {
+.home .main-content .header-container .intro .blackhole-btn {
   background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
   box-shadow: 0 0 10px blue;
   border: none;
@@ -362,28 +366,40 @@ img {
   font-family: Hiruko, sans-serif;
   margin-top: 3rem;
   color: whitesmoke;
+  transition: 0.2s ease-out;
 }
 @media (max-width: 1200px) {
-  .home .main-content .header-container .intro .sign-up-btn {
-    margin-bottom: 3rem;
-  }
 }
-.home .main-content .header-container .intro .sign-up-btn:hover {
+.home .main-content .header-container .intro .blackhole-btn:hover {
   background: black;
   color: #6A25F8;
   cursor: pointer;
   text-shadow: 0 0 5px blue;
   transform: scale(1.1);
 }
-.home .main-content h2 {
-  padding-top: 2rem;
-  font-size: 3.2rem;
-  font-family: 'Roboto';
+.home .main-content .buttons {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
 }
-@media (max-width: 500px) {
-  .home .main-content h2 {
-    font-size: 2.2rem;
-  }
+.home .main-content .buttons .login-btn {
+  background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
+  box-shadow: 0 0 10px blue;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: 0.2s ease-out;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+.home .main-content .buttons .login-btn:hover {
+  background: black;
+  color: #6A25F8;
+  cursor: pointer;
+  text-shadow: 0 0 5px blue;
+  transform: scale(1.1);
 }
 .home .main-content .pulsing {
   animation-name: appear;
@@ -475,6 +491,7 @@ img {
   cursor: pointer;
   width: 100%;
   text-align: center;
+  transition: 0.2s ease-out;
 }
 @media (max-width: 800px) {
   .home .sub-container .tabs .tabs-link {
@@ -501,10 +518,15 @@ img {
 }
 .home .sub-container .carousel {
   height: auto !important;
-  width: 100% !important;
+  width: 70% !important;
   margin: 0 auto !important;
   border-radius: 5px !important;
   margin-bottom: 1rem !important;
+}
+@media (max-width: 500px) {
+  .home .sub-container .carousel {
+    width: 100% !important;
+  }
 }
 .home .sub-container .carousel img,
 .home .sub-container .carousel .carousel-inner {
@@ -512,7 +534,7 @@ img {
 }
 .blackholeAnimation {
   animation-name: blackhole;
-  animation-duration: 2s;
+  animation-duration: 5s;
 }
 @keyframes blackhole {
   from {
@@ -558,6 +580,7 @@ img {
   border-radius: 5px;
   border: 1px solid #6A25F8;
   overflow: hidden;
+  transition: 0.2s ease-out;
   display: flex;
   flex-direction: column;
 }

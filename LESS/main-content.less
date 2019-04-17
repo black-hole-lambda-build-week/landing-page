@@ -7,34 +7,47 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        margin: 10% auto 5% 5%;
+        margin: 8% auto 0 5%;
+        height: 80vh;
 
-        @media @laptop {
-            flex-direction: column;
+        @media @tablet {
+          // flex-direction: column;
         }
     
         @media @mobile {
-            margin-top: 10%;
+            margin-top: 5%;
         }
         .blackhole {
             width: 55%;
             height: 100%;
 
+        // @media @laptop {
+        //   // width: 30%;
+        // }
+
+        @media @tablet {
+          display: none;
+        }
+      }
+      
+      h2 {
+        font-size: 3.2rem;
+        font-family: 'Roboto';
+
         @media @laptop {
-          width: 30%;
+          font-size: 2.4rem;
         }
 
         @media @tablet {
-          width: 55%;
+         
         }
 
         @media @mobile {
-          display: none;
+          font-size: 2.2rem;
         }
-        }
+    }
         .intro {
             display: flex;
-            justify-content: space-around;
             flex-direction: column;
             align-items: center;
             height: 60%;
@@ -52,20 +65,19 @@
                 padding-right: 2%;
                 padding-left: 2%;
 
-                @media @laptop {
-                  width: 40%;
-                }
 
                 @media @tablet {
                   width: 65%;
+                  max-width: 65%;
                 }
 
                 @media @mobile {
                   width: 90%;
+                  max-width: 90%;
                 }
             }
     
-            .sign-up-btn {
+            .blackhole-btn {
               background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
                 box-shadow: 0 0 10px blue;
                 border: none;
@@ -76,9 +88,14 @@
                 // text-transform: uppercase;
                 margin-top: 3rem;
                 color: whitesmoke;
+                transition: 0.2s ease-out;
 
                 @media @laptop {
-                   margin-bottom: 3rem;
+                  //  margin-bottom: 3rem;
+                }
+
+                @media @tablet {
+
                 }
     
             &:hover {
@@ -88,18 +105,43 @@
                 text-shadow: 0 0 5px blue;
                 transform: scale(1.1);
             }
+
          }
       }
     }
 
-    h2 {
-        padding-top: 2rem;
-        font-size: 3.2rem;
-        font-family: 'Roboto';
-        @media @mobile {
-          font-size: 2.2rem;
-        }
+    .buttons {
+      height: 20vh;
+      display: flex;
+      justify-content: space-between;
+
+      @media @tablet {
+
+      }
+
+      .login-btn {
+        background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
+        box-shadow: 0 0 10px blue;
+        padding: 10px 30px;
+        border-radius: 5px;
+        color: whitesmoke;
+        cursor: pointer;
+        font-size: 2rem;
+        transition: 0.2s ease-out;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+
+        &:hover {
+          background: black;
+          color: #6A25F8;
+          cursor: pointer;
+          text-shadow: 0 0 5px blue;
+          transform: scale(1.1);
+      }
+      }
     }
+  
+    
         
     .pulsing {
         animation-name: appear;
@@ -193,6 +235,7 @@
       cursor: pointer;
       width: 100%;
       text-align: center;
+      transition: 0.2s ease-out;
 
       @media @tablet {
         font-size: 1.8rem;
@@ -219,10 +262,14 @@
 
   .carousel {
     height: auto !important;
-    width: 100% !important;
+    width: 70% !important;
     margin: 0 auto !important;
     border-radius: 5px !important;
     margin-bottom: 1rem !important;
+
+    @media @mobile {
+      width: 100% !important;
+    }
 
     img,
     .carousel-inner {
@@ -236,7 +283,7 @@
 
 .blackholeAnimation {
   animation-name: blackhole;
-  animation-duration: 2s;
+  animation-duration: 5s;
 }
 
 @keyframes blackhole {
@@ -287,6 +334,7 @@
       border-radius: 5px;
       border: 1px solid @accentColor;
       overflow: hidden;
+      transition: 0.2s ease-out;
 
       display: flex;
       flex-direction: column;

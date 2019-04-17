@@ -60,7 +60,12 @@
             display: flex;
             align-items: center;
             justify-content: center;     
-            text-transform: uppercase;       
+            text-transform: uppercase; 
+            transition: 0.2s ease-out;
+            
+            @media @mobile {
+                font-size: 1.4rem;
+            }
 
         &:hover {
             border-bottom: 1px dashed blue;

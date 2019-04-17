@@ -44,7 +44,7 @@ class TabLink {
 
   //animation 
 
-  const animationBtn = document.querySelector('.sign-up-btn');
+  const animationBtn = document.querySelector('.blackhole-btn');
 
   const heading = document.querySelector('h1');
   const secondHeading = document.querySelector('h2');
@@ -55,7 +55,8 @@ class TabLink {
     
     secondHeading.classList.remove('pulsing');
     secondHeading.classList.add('blackholeAnimation');
-    setTimeout(function(){ heading.classList.remove('blackholeAnimation') }, 2500)
-    setTimeout(function(){ secondHeading.classList.remove('blackholeAnimation') }, 2500)
+    setTimeout(function(){ heading.classList.remove('blackholeAnimation') }, 5000)
+    setTimeout(function(){ secondHeading.classList.remove('blackholeAnimation') }, 5000)
+    setTimeout(function(){ secondHeading.classList.add('pulsing') }, 5000)
   });
 
