@@ -426,11 +426,10 @@ img {
 }
 .home .sub-container .tabs .tabs-links {
   display: flex;
-  background-color: none;
 }
 @media (max-width: 800px) {
   .home .sub-container .tabs .tabs-links {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .home .sub-container .tabs .tabs-link {
@@ -447,7 +446,6 @@ img {
   color: black;
 }
 .home .sub-container .tabs .tabs-link-selected {
-  z-index: 2;
   border-right: 1px solid #6A25F8;
   background-color: #6A25F8;
   color: black;
