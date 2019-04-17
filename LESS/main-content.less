@@ -24,6 +24,10 @@
           width: 30%;
         }
 
+        @media @tablet {
+          width: 55%;
+        }
+
         @media @mobile {
           display: none;
         }
@@ -52,22 +56,26 @@
                   width: 40%;
                 }
 
+                @media @tablet {
+                  width: 65%;
+                }
+
                 @media @mobile {
                   width: 90%;
                 }
             }
     
             .sign-up-btn {
-                background: #6A25F8;
+              background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
                 box-shadow: 0 0 10px blue;
                 border: none;
                 padding: 5px 15px 5px 15px;
-                border-radius: 25px;
-                font-size: 2.4rem;
+                border-radius: 5px;
+                font-size: 2.8rem;
                 font-family: Hiruko, sans-serif;
-                text-transform: uppercase;
-                font-weight: bold;
-                margin-top: 1rem;
+                // text-transform: uppercase;
+                margin-top: 3rem;
+                color: whitesmoke;
 
                 @media @laptop {
                    margin-bottom: 3rem;
@@ -78,15 +86,22 @@
                 color: #6A25F8;
                 cursor: pointer;
                 text-shadow: 0 0 5px blue;
+                transform: scale(1.1);
             }
          }
       }
     }
-        
-    .pulsing {
+
+    h2 {
         padding-top: 2rem;
         font-size: 3.2rem;
-        font-family: Hiruko;
+        font-family: 'Roboto';
+        @media @mobile {
+          font-size: 2.2rem;
+        }
+    }
+        
+    .pulsing {
         animation-name: appear;
         animation-iteration-count: infinite;
         animation-duration: 3s;
@@ -96,10 +111,6 @@
            from {opacity: 0.1}
             to {opacity: 1; text-shadow: 0 0 5px blue;}
         }
-
-         @media @mobile {
-           font-size: 2.2rem;
-         }
     }
 }
 
@@ -118,6 +129,20 @@
     border: 1px solid @accentColor;
     border-radius: 5px;
     overflow: hidden;
+    height: 350px;
+
+    @media @laptop {
+      height: 300px;
+    }
+
+    @media @tablet {
+      height: 500px;
+    }
+
+    @media @mobile {
+      height: 600px;
+    }
+
     .box {
       padding: 40px;
       .box-title {
@@ -132,13 +157,8 @@
 
     .tabs-items {
       width: 100%;
-      height: 30vh;
       display: flex;
       justify-content: center;
-
-      @media @laptop {
-          height: auto;
-      }
     }
     .tabs-item {
       display: none; 
@@ -147,11 +167,12 @@
       .tabs-item-description {
         padding-bottom: 10px;
         padding-top: 20px;
-        height: 100%;
+
         p {
           line-height: 1.5;
-          height: 100%;
+          color: whitesmoke;
           font-size: 1.8rem;
+          font-family: 'Roboto', sans-serif;
         }
       }
     }
@@ -161,14 +182,13 @@
   
     .tabs-links {
       display: flex;
-      // background-color: none;
     }
   
     .tabs-link {
       padding: 10px 25px;
       font-size: 2.4rem;
       background-color: black;
-      color: @accentColor;
+      color: whitesmoke;
       border: 1px solid @accentColor;
       cursor: pointer;
       width: 100%;
@@ -179,7 +199,6 @@
     }
     @media @mobile {
       font-size: 1.6rem;
-      padding: 0;
   }
       &:hover {
         background-color: @accentColor;
@@ -190,7 +209,7 @@
     .tabs-link-selected {
       border-right: 1px solid @accentColor;
       background-color: @accentColor;
-      color: black;
+      color: whitesmoke;
 
       &:hover {
         text-shadow: 0 0 5px blue;
@@ -213,6 +232,29 @@
 }
 }
 
+//animation for button click
+
+.blackholeAnimation {
+  animation-name: blackhole;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blackhole {
+  from {
+    transform: rotate(0deg);
+    border: none;
+  }
+  to {
+    transform: rotate(360deg);
+    width: 0;
+    border: none;
+    font-size: 0;
+    
+  }
+}
+
 
 // About page styling begins here, this comment will not appear in the CSS file
 
@@ -220,7 +262,7 @@
 
     .boxes {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
@@ -251,6 +293,7 @@
 
       &:hover {
         box-shadow: 0 0 10px blue;
+        transform: scale(1.05);
       }
 
       @media @laptop {

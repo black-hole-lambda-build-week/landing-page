@@ -41,3 +41,21 @@ class TabLink {
   links.forEach((currentLink) => {
     return new TabLink(currentLink)
   });
+
+  //animation 
+
+  const animationBtn = document.querySelector('.sign-up-btn');
+
+  const heading = document.querySelector('h1');
+  const secondHeading = document.querySelector('h2');
+
+  animationBtn.addEventListener('click', (event) => { 
+    console.log ('Hey Lambda Staff!');
+    heading.classList.add('blackholeAnimation');
+    
+    // secondHeading.classList.remove('pulsing');
+    // secondHeading.classList.add('blackholeAnimation');
+    setTimeout(function(){ heading.classList.remove('blackholeAnimation') }, 2000)
+    // setTimeout(function(){ secondHeading.classList.remove('blackholeAnimation') }, 2500)
+  });
+
