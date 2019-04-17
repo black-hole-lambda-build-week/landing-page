@@ -41,3 +41,9 @@ class TabLink {
   links.forEach((currentLink) => {
     return new TabLink(currentLink)
   });
+
+  //animation 
+
+  const animationBtn = document.querySelector('.sign-up-btn');
+
+  animationBtn.addEventListener('click', (event) => { console.log ('hello')});

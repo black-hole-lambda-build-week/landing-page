@@ -243,7 +243,7 @@ img {
   text-decoration: none;
   font-size: 1.8rem;
   border-radius: 15px;
-  color: whitesmoke;
+  color: #6A25F8;
   height: 40px;
   width: 120px;
   font-family: Hiruko;
@@ -409,7 +409,7 @@ img {
 }
 @media (max-width: 800px) {
   .home .sub-container .section {
-    height: 400px;
+    height: 500px;
   }
 }
 @media (max-width: 500px) {
@@ -431,8 +431,6 @@ img {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-@media (max-width: 1200px) {
 }
 .home .sub-container .tabs .tabs-item {
   display: none;
@@ -533,6 +531,7 @@ img {
 }
 .about .boxes .member:hover {
   box-shadow: 0 0 10px blue;
+  transform: scale(1.05);
 }
 @media (max-width: 1200px) {
   .about .boxes .member {

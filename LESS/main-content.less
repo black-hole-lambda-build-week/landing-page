@@ -135,7 +135,7 @@
     }
 
     @media @tablet {
-      height: 400px;
+      height: 500px;
     }
 
     @media @mobile {
@@ -156,13 +156,8 @@
 
     .tabs-items {
       width: 100%;
-      // height: 30vh;
       display: flex;
       justify-content: center;
-
-      @media @laptop {
-          // height: auto;
-      }
     }
     .tabs-item {
       display: none; 
@@ -171,7 +166,7 @@
       .tabs-item-description {
         padding-bottom: 10px;
         padding-top: 20px;
-        // height: 100%;
+
         p {
           line-height: 1.5;
           color: whitesmoke;
@@ -274,6 +269,7 @@
 
       &:hover {
         box-shadow: 0 0 10px blue;
+        transform: scale(1.05);
       }
 
       @media @laptop {
