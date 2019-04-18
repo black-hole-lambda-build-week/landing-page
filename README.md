@@ -8,8 +8,7 @@ Sometimes, you just need to vent to get it out, move on, and feel better.  Enter
 
 #### Screenshot of Landing/Marketing Page 
 
-Inline-style: 
-![alt text](img/landingpage.png "Logo Title Text 1")
+![alt text](img/landingpage.PNG)
 
 #### Screenshots of Blackhole Application
 
