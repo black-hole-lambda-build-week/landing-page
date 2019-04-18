@@ -45,7 +45,6 @@ class TabLink {
   //animation 
 
   const animationBtn = document.querySelector('.blackhole-btn');
-
   const intro = document.querySelector('.intro');
   const secondHeading = document.querySelector('h2');
 
@@ -53,9 +52,7 @@ class TabLink {
   animationBtn.addEventListener('click', () => { 
     console.log ('Hey Lambda Staff!');
     intro.classList.add('blackholeAnimation');
-  
     secondHeading.classList.remove('pulsing');
-    
     setTimeout(function(){ intro.classList.remove('blackholeAnimation') }, 7000);
     setTimeout(function(){ secondHeading.classList.add('pulsing') }, 7000);
     setTimeout(function(){ intro.classList.add('fadeIn') }, 7000);
