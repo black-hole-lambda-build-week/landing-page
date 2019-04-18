@@ -138,7 +138,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 body {
-  background-image: url("../img/bg1.jpg") !important;
+  background-image: url("../img/bg2.jpg") !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -146,6 +146,7 @@ body {
 @media (max-width: 500px) {
   body {
     background: black;
+    background-image: url("../img/bg1.jpg") !important;
   }
 }
 h1,
@@ -179,7 +180,7 @@ img {
   height: auto;
 }
 .container {
-  max-width: 1300px !important;
+  max-width: 100% !important;
   width: 100% !important;
   height: 100% !important;
   margin: 0 auto;
@@ -293,8 +294,9 @@ img {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 8% auto 0 5%;
-  height: 80vh;
+  margin: 8% auto 0 auto;
+  height: 75vh;
+  width: 80%;
 }
 @media (max-width: 500px) {
   .home .main-content .header-container {
@@ -311,12 +313,12 @@ img {
   }
 }
 .home .main-content .header-container h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-family: 'Roboto';
 }
 @media (max-width: 1200px) {
   .home .main-content .header-container h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 500px) {
@@ -368,9 +370,9 @@ img {
   color: whitesmoke;
   transition: 0.2s ease-out;
 }
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .home .main-content .header-container .intro .blackhole-btn {
-    top: 45vh;
+    font-size: 2.4rem;
   }
 }
 @media (max-width: 500px) {
@@ -388,7 +390,7 @@ img {
 .home .main-content .buttons {
   height: 20vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .home .main-content .buttons .login-btn {
   background: black;
@@ -431,7 +433,7 @@ img {
   align-items: center;
 }
 .home .sub-container .section {
-  width: 100%;
+  width: 75%;
   margin: 20px;
   display: flex;
   border: 1px solid #6A25F8;
@@ -574,9 +576,9 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   height: auto;
-  padding: 12% 0 2% 0;
-  max-width: 1200px;
+  padding: 8% 0 2% 0;
   width: 100%;
+  margin: 0 auto;
 }
 @media (max-width: 800px) {
   .about .boxes {
@@ -607,12 +609,12 @@ img {
 }
 @media (max-width: 1200px) {
   .about .boxes .member {
-    width: 40%;
+    width: 30%;
   }
 }
 @media (max-width: 800px) {
   .about .boxes .member {
-    width: 50%;
+    width: 48%;
     flex-direction: column;
     height: auto;
   }
@@ -620,6 +622,7 @@ img {
 @media (max-width: 500px) {
   .about .boxes .member {
     width: 90%;
+    margin-bottom: 5%;
   }
 }
 .about .boxes .member img {
@@ -634,6 +637,11 @@ img {
     height: auto;
     width: 50%;
     align-self: center;
+  }
+}
+@media (max-width: 500px) {
+  .about .boxes .member img {
+    margin-bottom: 5%;
   }
 }
 .about .boxes .member .text {

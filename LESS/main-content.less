@@ -7,8 +7,9 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        margin: 8% auto 0 5%;
-        height: 80vh;
+        margin: 8% auto 0 auto;
+        height: 75vh;
+        width: 80%;
 
         @media @mobile {
             margin-top: 5%;
@@ -24,11 +25,11 @@
       }
       
       h2 {
-        font-size: 3.2rem;
+        font-size: 3rem;
         font-family: 'Roboto';
 
         @media @laptop {
-          font-size: 2.4rem;
+          font-size: 2rem;
         }
 
         @media @mobile {
@@ -39,12 +40,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 60%;
-            
+            height: 60%;      
           
-
             @media @mobile {
-              // margin-top: 20%;
               width: 90%;
               margin: 0 auto;
               height: auto;
@@ -81,8 +79,8 @@
                 color: whitesmoke;
                 transition: 0.2s ease-out;
 
-                @media @tablet {
-                  top: 45vh;
+                @media @laptop {
+                  font-size: 2.4rem;
                 }
 
                 @media @mobile {
@@ -104,7 +102,7 @@
     .buttons {
       height: 20vh;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
 
       .login-btn {
         background: black;
@@ -153,7 +151,7 @@
 
 
 .section {
-    width: 100%;
+    width: 75%;
     margin: 20px;
     display: flex;
     border: 1px solid @accentColor;
@@ -313,9 +311,9 @@
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
-    padding: 12% 0 2% 0;
-    max-width: 1200px;
+    padding: 8% 0 2% 0;
     width: 100%;
+    margin: 0 auto;
 
     @media @tablet {
       height: auto;
@@ -345,17 +343,18 @@
       }
 
       @media @laptop {
-        width: 40%;
+        width: 30%;
       }
 
       @media @tablet {
-        width: 50%;
+        width: 48%;
         flex-direction: column;
         height: auto;
       }
 
       @media @mobile {
         width: 90%;
+        margin-bottom: 5%;
       }
 
       img {
@@ -369,6 +368,9 @@
           height: auto;
           width: 50%;
           align-self: center;
+        }
+        @media @mobile {
+          margin-bottom: 5%;
         }
       }
 
