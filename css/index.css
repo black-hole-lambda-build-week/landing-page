@@ -191,7 +191,6 @@ img {
   .container {
     background: none;
     opacity: 0.9;
-    border: 1px solid red;
   }
 }
 @font-face {
@@ -294,10 +293,12 @@ img {
 .home .main-content .header-container {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
   margin-top: 8%;
   height: 80vh;
   width: 70%;
+  align-self: center;
 }
 @media (max-width: 1400px) {
   .home .main-content .header-container {
@@ -312,7 +313,6 @@ img {
 }
 @media (max-width: 500px) {
   .home .main-content .header-container {
-    margin-top: 20%;
     width: 100%;
   }
 }

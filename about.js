@@ -12,6 +12,7 @@ class MemberInfo {
     toggleMember() {
         this.memberContent.classList.toggle('member-content');
         this.member.classList.toggle('fadeIn');
+        // this.selectMember.classList.toggle('fadeIn');
         
         this.fadeBackIn = this.fadeBackIn.bind(this);
         this.selectMember.addEventListener('click', this.fadeBackIn);
