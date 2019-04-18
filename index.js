@@ -86,5 +86,5 @@ class TabLink {
     // setTimeout(function(){ button.classList.remove('blackholeAnimation') }, 7500)
 
     setTimeout(function(){ intro.classList.add('fadeIn') }, 7000)
-    setTimeout(function(){ intro.classList.remove('fadeIn') }, 11500)
+    setTimeout(function(){ intro.classList.remove('fadeIn') }, 11000)
   });
