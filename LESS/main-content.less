@@ -166,18 +166,18 @@
     border: 1px solid @accentColor;
     border-radius: 5px;
     overflow: hidden;
-    height: 350px;
+    height: 250px;
 
     @media @laptop {
       height: 300px;
     }
 
     @media @tablet {
-      height: 500px;
+      height: 350px;
     }
 
     @media @mobile {
-      height: 650px;
+      height: 400px;
       width: 100%;
     }
 
@@ -201,7 +201,7 @@
     .tabs-item {
       display: none; 
       color: @accentColor;
-      width: 75%;
+      width: 90%;
       .tabs-item-description {
         padding-bottom: 10px;
         padding-top: 20px;
@@ -211,6 +211,26 @@
           color: whitesmoke;
           font-size: 1.8rem;
           font-family: 'Roboto', sans-serif;
+
+          @media @laptop {
+            font-size: 1.6rem;
+          }
+
+          @media @mobile {
+            font-size: 1.4rem;
+          }
+        }
+        li {
+          color: whitesmoke;
+          font-size: 1.8rem;
+          font-family: 'Roboto', sans-serif;
+          line-height: 2;
+          @media @laptop {
+            font-size: 1.4rem;
+          }
+          @media @mobile {
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -237,7 +257,7 @@
         font-size: 1.8rem;
     }
     @media @mobile {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
   }
       &:hover {
         background-color: @accentColor;
