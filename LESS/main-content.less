@@ -8,28 +8,37 @@
         flex-direction: row-reverse;
         align-items: center;
         margin: 8% auto 0 auto;
-        height: 75vh;
-        width: 80%;
+        height: 80vh;
+        width: 70%;
+
+        @media @laptop {
+          width: 50%;
+        }
+
+        @media @tablet {
+          width: 80%;
+        }
 
         @media @mobile {
             margin-top: 5%;
+            width: 100%;
         }
         .blackhole {
             width: 55%;
             height: 100%;
 
 
-        @media @tablet {
+        @media @laptop {
           display: none;
         }
       }
       
       h2 {
-        font-size: 3rem;
+        font-size: 3.2rem;
         font-family: 'Roboto';
 
         @media @laptop {
-          font-size: 2rem;
+          font-size: 2.4rem;
         }
 
         @media @mobile {
@@ -157,18 +166,19 @@
     border: 1px solid @accentColor;
     border-radius: 5px;
     overflow: hidden;
-    height: 350px;
+    height: 250px;
 
     @media @laptop {
       height: 300px;
     }
 
     @media @tablet {
-      height: 500px;
+      height: 350px;
     }
 
     @media @mobile {
-      height: 650px;
+      height: 400px;
+      width: 100%;
     }
 
     .box {
@@ -191,7 +201,7 @@
     .tabs-item {
       display: none; 
       color: @accentColor;
-      width: 75%;
+      width: 90%;
       .tabs-item-description {
         padding-bottom: 10px;
         padding-top: 20px;
@@ -201,6 +211,26 @@
           color: whitesmoke;
           font-size: 1.8rem;
           font-family: 'Roboto', sans-serif;
+
+          @media @laptop {
+            font-size: 1.6rem;
+          }
+
+          @media @mobile {
+            font-size: 1.4rem;
+          }
+        }
+        li {
+          color: whitesmoke;
+          font-size: 1.8rem;
+          font-family: 'Roboto', sans-serif;
+          line-height: 2;
+          @media @laptop {
+            font-size: 1.4rem;
+          }
+          @media @mobile {
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -227,7 +257,7 @@
         font-size: 1.8rem;
     }
     @media @mobile {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
   }
       &:hover {
         background-color: @accentColor;
@@ -270,7 +300,6 @@
 .blackholeAnimation {
   animation-name: blackhole;
   animation-duration: 7s;
-  
 }
 
 @keyframes blackhole {
@@ -311,13 +340,17 @@
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
-    padding: 8% 0 2% 0;
+    padding: 5% 0 2% 0;
     width: 100%;
     margin: 0 auto;
 
-    @media @tablet {
-      height: auto;
+    @media @laptop {
       padding-top: 10%;
+    }
+
+    @media @tablet {
+      // height: auto;
+      padding-top: 12%;
     }
 
     @media @mobile {
@@ -326,30 +359,21 @@
     
     .member {
       width: 20%;
-      background: #060406;
-      opacity: 0.8;
       margin: 1%;
       border-radius: 5px;
-      border: 1px solid @accentColor;
-      overflow: hidden;
-      transition: 0.2s ease-out;
+      height: 350px;
 
       display: flex;
       flex-direction: column;
-
-      &:hover {
-        box-shadow: 0 0 10px blue;
-        transform: scale(1.05);
-      }
+      justify-content: center;
+      align-items: center;
 
       @media @laptop {
         width: 30%;
       }
 
       @media @tablet {
-        width: 48%;
-        flex-direction: column;
-        height: auto;
+        width: 45%;
       }
 
       @media @mobile {
@@ -362,7 +386,9 @@
         border-radius: 50%;
         width: 50%;
         align-self: center;
-        margin-top: 5%;
+        cursor: pointer;
+        transition: 0.2s ease-out;
+        margin-top: 2%;
 
         @media @tablet {
           height: auto;
@@ -371,6 +397,12 @@
         }
         @media @mobile {
           margin-bottom: 5%;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 10px blue;
+          border: 1px solid @accentColor;
         }
       }
 
@@ -386,11 +418,11 @@
         color: @accentColor;
         text-shadow: 0 0 10px blue;
         font-family: Hiruko;
-        font-size: 3.5rem;
+        font-size: 3.4rem;
         padding-top: 20px;
         padding-right: 5%;
         padding-left: 5%;
-        width: 250px;
+        width: 275px;
         text-align: center;
 
         @media @mobile {
@@ -405,8 +437,20 @@
       .fab {
        color: @accentColor;
        padding: 5px;
+
       }
     }
   }
 }
+
+//classes for accordion on about page
+
+
+.member-content {
+  height: 0;
+  overflow: hidden;
+}
+
+
+
 

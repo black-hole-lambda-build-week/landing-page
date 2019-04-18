@@ -1,28 +1,30 @@
 //dropdown 
-class Member {
+class MemberInfo {
     constructor(member) {
         this.member = member;
-        console.log(this)
+        this.selectMember = this.member.querySelector('img');
+        this.memberContent = this.member.querySelector('.member-content');
+        
+        this.toggleMember = this.toggleMember.bind(this);
+        this.selectMember.addEventListener('click', this.toggleMember);
+    }
+    //methods
+    toggleMember() {
+        this.memberContent.classList.toggle('member-content');
+        this.member.classList.toggle('fadeIn');
+        
+        this.fadeBackIn = this.fadeBackIn.bind(this);
+        this.selectMember.addEventListener('click', this.fadeBackIn);
+    }
+
+    fadeBackIn(){
+        this.selectMember.classList.toggle('fadeIn');
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //step 1 
 const teamMember = document.querySelectorAll('.member')
 
 teamMember.forEach((member) => {
-    return new Member(member);
+    return new MemberInfo(member);
 });
