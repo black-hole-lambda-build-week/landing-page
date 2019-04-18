@@ -301,6 +301,7 @@ img {
 @media (max-width: 1400px) {
   .home .main-content .header-container {
     width: 50%;
+    flex-direction: column;
   }
 }
 @media (max-width: 800px) {
@@ -317,10 +318,12 @@ img {
 .home .main-content .header-container .blackhole {
   width: 55%;
   height: 100%;
+  opacity: 0.5;
 }
 @media (max-width: 1400px) {
   .home .main-content .header-container .blackhole {
-    display: none;
+    height: 50%;
+    width: auto;
   }
 }
 .home .main-content .header-container h2 {
