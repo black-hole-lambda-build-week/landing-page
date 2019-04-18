@@ -10,10 +10,6 @@
         margin: 8% auto 0 5%;
         height: 80vh;
 
-        @media @tablet {
-          // flex-direction: column;
-        }
-    
         @media @mobile {
             margin-top: 5%;
         }
@@ -21,9 +17,6 @@
             width: 55%;
             height: 100%;
 
-        // @media @laptop {
-        //   // width: 30%;
-        // }
 
         @media @tablet {
           display: none;
@@ -85,17 +78,12 @@
                 border-radius: 5px;
                 font-size: 2.8rem;
                 font-family: Hiruko, sans-serif;
-                // text-transform: uppercase;
                 margin-top: 3rem;
                 color: whitesmoke;
                 transition: 0.2s ease-out;
 
-                @media @laptop {
-                  //  margin-bottom: 3rem;
-                }
-
                 @media @tablet {
-
+                  top: 45vh;
                 }
     
             &:hover {
@@ -103,7 +91,7 @@
                 color: #6A25F8;
                 cursor: pointer;
                 text-shadow: 0 0 5px blue;
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
 
          }
@@ -115,14 +103,10 @@
       display: flex;
       justify-content: space-between;
 
-      @media @tablet {
-
-      }
-
       .login-btn {
-        background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
+        background: black;
         box-shadow: 0 0 10px blue;
-        padding: 10px 30px;
+        padding: 5px 30px;
         border-radius: 5px;
         color: whitesmoke;
         cursor: pointer;
@@ -130,13 +114,14 @@
         transition: 0.2s ease-out;
         border: none;
         font-family: 'Roboto', sans-serif;
+        
 
         &:hover {
-          background: black;
-          color: #6A25F8;
+          background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
+          color: whitesmoke;
           cursor: pointer;
           text-shadow: 0 0 5px blue;
-          transform: scale(1.1);
+          transform: scale(1.05);
       }
       }
     }
@@ -182,7 +167,7 @@
     }
 
     @media @mobile {
-      height: 600px;
+      height: 650px;
     }
 
     .box {
@@ -265,7 +250,7 @@
     width: 70% !important;
     margin: 0 auto !important;
     border-radius: 5px !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 5rem !important;
 
     @media @mobile {
       width: 100% !important;
@@ -283,18 +268,21 @@
 
 .blackholeAnimation {
   animation-name: blackhole;
-  animation-duration: 5s;
+  animation-duration: 7s;
+  // animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 @keyframes blackhole {
   from {
     transform: rotate(0deg);
     border: none;
-    height: 100%;
     width: 100%;
+    height: 50%;
+    padding: 0;
+    font-size: 3rem;
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(0);
     width: 0;
     height: 0;
     border: none;
@@ -302,6 +290,14 @@
   }
 }
 
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 5s;
+}
+  @keyframes fadeIn  {
+    from {opacity: 0};
+    to {opacity: 1};
+  }
 
 // About page styling begins here, this comment will not appear in the CSS file
 

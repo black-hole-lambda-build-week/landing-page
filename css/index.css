@@ -273,7 +273,7 @@ img {
 .navigation .nav-links a:hover {
   border-bottom: 1px dashed blue;
   text-shadow: 0 0 5px blue;
-  color: #6A25F8;
+  color: whitesmoke;
 }
 .footer {
   font-size: 2rem;
@@ -295,8 +295,6 @@ img {
   align-items: center;
   margin: 8% auto 0 5%;
   height: 80vh;
-}
-@media (max-width: 800px) {
 }
 @media (max-width: 500px) {
   .home .main-content .header-container {
@@ -368,14 +366,17 @@ img {
   color: whitesmoke;
   transition: 0.2s ease-out;
 }
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
+  .home .main-content .header-container .intro .blackhole-btn {
+    top: 45vh;
+  }
 }
 .home .main-content .header-container .intro .blackhole-btn:hover {
   background: black;
   color: #6A25F8;
   cursor: pointer;
   text-shadow: 0 0 5px blue;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .home .main-content .buttons {
   height: 20vh;
@@ -383,9 +384,9 @@ img {
   justify-content: space-between;
 }
 .home .main-content .buttons .login-btn {
-  background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
+  background: black;
   box-shadow: 0 0 10px blue;
-  padding: 10px 30px;
+  padding: 5px 30px;
   border-radius: 5px;
   color: whitesmoke;
   cursor: pointer;
@@ -395,11 +396,11 @@ img {
   font-family: 'Roboto', sans-serif;
 }
 .home .main-content .buttons .login-btn:hover {
-  background: black;
-  color: #6A25F8;
+  background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
+  color: whitesmoke;
   cursor: pointer;
   text-shadow: 0 0 5px blue;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .home .main-content .pulsing {
   animation-name: appear;
@@ -443,7 +444,7 @@ img {
 }
 @media (max-width: 500px) {
   .home .sub-container .section {
-    height: 600px;
+    height: 650px;
   }
 }
 .home .sub-container .section .box {
@@ -521,7 +522,7 @@ img {
   width: 70% !important;
   margin: 0 auto !important;
   border-radius: 5px !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 5rem !important;
 }
 @media (max-width: 500px) {
   .home .sub-container .carousel {
@@ -534,21 +535,35 @@ img {
 }
 .blackholeAnimation {
   animation-name: blackhole;
-  animation-duration: 5s;
+  animation-duration: 7s;
 }
 @keyframes blackhole {
   from {
     transform: rotate(0deg);
     border: none;
-    height: 100%;
     width: 100%;
+    height: 50%;
+    padding: 0;
+    font-size: 3rem;
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(0);
     width: 0;
     height: 0;
     border: none;
     font-size: 0;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 5s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .about .boxes {
