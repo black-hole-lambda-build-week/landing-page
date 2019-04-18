@@ -91,7 +91,7 @@
                 color: #6A25F8;
                 cursor: pointer;
                 text-shadow: 0 0 5px blue;
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
 
          }
@@ -104,7 +104,7 @@
       justify-content: space-between;
 
       .login-btn {
-        background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
+        background: black;
         box-shadow: 0 0 10px blue;
         padding: 5px 30px;
         border-radius: 5px;
@@ -117,11 +117,11 @@
         
 
         &:hover {
-          background: black;
-          color: #6A25F8;
+          background: linear-gradient(180deg, #5f14ff 0%, #6c12dd 100%);
+          color: whitesmoke;
           cursor: pointer;
           text-shadow: 0 0 5px blue;
-          transform: scale(1.1);
+          transform: scale(1.05);
       }
       }
     }
@@ -167,7 +167,7 @@
     }
 
     @media @mobile {
-      height: 600px;
+      height: 650px;
     }
 
     .box {
@@ -268,7 +268,8 @@
 
 .blackholeAnimation {
   animation-name: blackhole;
-  animation-duration: 5s;
+  animation-duration: 7s;
+  // animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 @keyframes blackhole {
@@ -276,10 +277,12 @@
     transform: rotate(0deg);
     border: none;
     width: 100%;
-    height: 100%;
+    height: 50%;
+    padding: 0;
+    font-size: 3rem;
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(0);
     width: 0;
     height: 0;
     border: none;
@@ -287,11 +290,14 @@
   }
 }
 
-.button-holder {
-  position: fixed;
-  top: 55vh;
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 5s;
 }
-
+  @keyframes fadeIn  {
+    from {opacity: 0};
+    to {opacity: 1};
+  }
 
 // About page styling begins here, this comment will not appear in the CSS file
 
