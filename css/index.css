@@ -321,7 +321,7 @@ img {
 }
 @media (max-width: 500px) {
   .home .main-content .header-container h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
 .home .main-content .header-container .intro {
@@ -371,6 +371,11 @@ img {
 @media (max-width: 800px) {
   .home .main-content .header-container .intro .blackhole-btn {
     top: 45vh;
+  }
+}
+@media (max-width: 500px) {
+  .home .main-content .header-container .intro .blackhole-btn {
+    font-size: 2.2rem;
   }
 }
 .home .main-content .header-container .intro .blackhole-btn:hover {
