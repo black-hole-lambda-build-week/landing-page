@@ -293,10 +293,12 @@ img {
 .home .main-content .header-container {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
-  margin: 8% auto 0 auto;
+  margin-top: 8%;
   height: 80vh;
   width: 70%;
+  align-self: center;
 }
 @media (max-width: 1400px) {
   .home .main-content .header-container {
@@ -311,7 +313,6 @@ img {
 }
 @media (max-width: 500px) {
   .home .main-content .header-container {
-    margin-top: 5%;
     width: 100%;
   }
 }
@@ -322,8 +323,8 @@ img {
 }
 @media (max-width: 1400px) {
   .home .main-content .header-container .blackhole {
-    height: 50%;
-    width: auto;
+    height: auto;
+    width: 80%;
   }
 }
 .home .main-content .header-container h2 {
