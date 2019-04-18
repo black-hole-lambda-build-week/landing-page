@@ -2,6 +2,7 @@
 class Member {
     constructor(member) {
         this.member = member;
+        console.log(this)
     }
 }
 

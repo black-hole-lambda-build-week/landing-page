@@ -8,7 +8,7 @@ Sometimes, you just need to vent to get it out, move on, and feel better.  Enter
 
 ####Screenshot of Landing/Marketing Page 
 
-<img src="img/landingpage.png" alt="screenshot of Blackhole marketing home page">
+<img src="../img/landingpage.png" alt="screenshot of Blackhole marketing home page">
 
 #### Screenshots of Blackhole Application
 
