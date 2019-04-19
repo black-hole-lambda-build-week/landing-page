@@ -426,21 +426,6 @@ img {
   text-shadow: 0 0 5px blue;
   transform: scale(1.05);
 }
-.home .main-content .pulsing {
-  animation-name: appear;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
-  animation-direction: alternate;
-}
-@keyframes appear {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-    text-shadow: 0 0 5px blue;
-  }
-}
 .home .sub-container {
   display: flex;
   flex-direction: column;
@@ -584,32 +569,25 @@ img {
 .home .sub-container .carousel .carousel-inner {
   border-radius: 5px !important;
 }
-.blackholeAnimation {
-  animation-name: blackhole;
-  animation-duration: 7s;
+.about h1 {
+  text-align: center;
+  padding-top: 7%;
+  font-family: Hiruko;
 }
-@keyframes blackhole {
-  from {
-    transform: scale(1) rotate(0deg);
-    border: none;
-    max-width: 90vw;
-  }
-  to {
-    transform: scale(0) rotate(360deg);
-    border: none;
-    font-size: 0;
+@media (max-width: 1400px) {
+  .about h1 {
+    padding-top: 10%;
   }
 }
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 5s;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@media (max-width: 800px) {
+  .about h1 {
+    padding-top: 10%;
   }
-  to {
-    opacity: 1;
+}
+@media (max-width: 500px) {
+  .about h1 {
+    padding-top: 25%;
+    font-size: 2.8rem;
   }
 }
 .about .boxes {
@@ -618,23 +596,13 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   height: auto;
-  padding: 5% 0 2% 0;
+  padding: 0 0 2% 0;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1400px) {
   .about .boxes {
-    padding-top: 10%;
-  }
-}
-@media (max-width: 800px) {
-  .about .boxes {
-    padding-top: 12%;
-  }
-}
-@media (max-width: 500px) {
-  .about .boxes {
-    padding-top: 30%;
+    padding-top: 5%;
   }
 }
 .about .boxes .member {
@@ -724,4 +692,47 @@ img {
 .member-content {
   height: 0;
   overflow: hidden;
+}
+.appear {
+  animation-name: appear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+@keyframes appear {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 5px blue;
+  }
+}
+.blackholeAnimation {
+  animation-name: blackhole;
+  animation-duration: 7s;
+}
+@keyframes blackhole {
+  from {
+    transform: scale(1) rotate(0deg);
+    border: none;
+    max-width: 90vw;
+  }
+  to {
+    transform: scale(0) rotate(360deg);
+    border: none;
+    font-size: 0;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
