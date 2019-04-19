@@ -4,7 +4,7 @@ class MemberInfo {
         this.member = member;
         this.selectMember = this.member.querySelector('img');
         this.memberContent = this.member.querySelector('.member-content');
-        this.member.style.innerHTML = "click me"
+
         this.toggleMember = this.toggleMember.bind(this);
         this.selectMember.addEventListener('click', this.toggleMember);
     }
@@ -19,7 +19,6 @@ class MemberInfo {
 
     fadeBackIn(){
         this.selectMember.classList.toggle('fadeIn');
-        this.selectMember.classList.toggle('pulse')
     }
 }
 
